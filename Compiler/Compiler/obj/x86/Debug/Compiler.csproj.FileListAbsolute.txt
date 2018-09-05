@@ -1,2 +1,12 @@
 C:\Users\Alumno14\Documents\Alberto Villa\Compiler\Compiler\bin\x86\Debug\Compiler.exe.config
 D:\IDV 6º\Segundo intento\Compiler\Compiler\bin\x86\Debug\Compiler.exe.config
+D:\IDV 6º\Segundo intento\Compilador\Compiler\Compiler\bin\x86\Debug\Compiler.exe.config
+E:\IDV 6º\Segundo intento\Compilador\Compiler\Compiler\bin\x86\Debug\Compiler.exe.config
+E:\IDV 6º\Segundo intento\Compilador\Compiler\Compiler\bin\x86\Debug\Compiler.exe
+E:\IDV 6º\Segundo intento\Compilador\Compiler\Compiler\bin\x86\Debug\Compiler.pdb
+E:\IDV 6º\Segundo intento\Compilador\Compiler\Compiler\obj\x86\Debug\Compiler.csprojResolveAssemblyReference.cache
+E:\IDV 6º\Segundo intento\Compilador\Compiler\Compiler\obj\x86\Debug\Compiler.Form1.resources
+E:\IDV 6º\Segundo intento\Compilador\Compiler\Compiler\obj\x86\Debug\Compiler.Properties.Resources.resources
+E:\IDV 6º\Segundo intento\Compilador\Compiler\Compiler\obj\x86\Debug\Compiler.csproj.GenerateResource.Cache
+E:\IDV 6º\Segundo intento\Compilador\Compiler\Compiler\obj\x86\Debug\Compiler.exe
+E:\IDV 6º\Segundo intento\Compilador\Compiler\Compiler\obj\x86\Debug\Compiler.pdb

@@ -21,6 +21,8 @@ namespace Compiler
         bool srcChanged, fileSaved;
         String filePath;
 
+        dynamic compilerDLLInstance;
+
         public Form1()
         {
             InitializeComponent();
@@ -38,38 +40,38 @@ namespace Compiler
             {
                 if (processCanBeDebugged()) // Debug
                 {
-                    dllFullPath = getPath();// obtener el path completo a la DLL compilada en x64/Debug
+                    dllFullPath = Path.Combine(getPath(), "x64\\Debug");// obtener el path completo a la DLL compilada en x64/Debug
                 }
                 else // Release
                 {
-                    dllFullPath = "";// obtener el path completo a la DLL compilada en x64/Release
+                    dllFullPath = Path.Combine(getPath(), "x64\\Release");// obtener el path completo a la DLL compilada en x64/Release
                 }
             }
             else // 32bits
             {
                 if (processCanBeDebugged()) // Debug
                 {
-                    dllFullPath = "";// obtener el path completo a la DLL compilada en x86/Debug
+                    dllFullPath = Path.Combine(getPath(), "x86\\Debug");// obtener el path completo a la DLL compilada en x86/Debug
                 }
                 else // Release
                 {
-                    dllFullPath = "";// obtener el path completo a la DLL compilada en x86/Release
+                    dllFullPath = Path.Combine(getPath(), "x86\\Release");// obtener el path completo a la DLL compilada en x86/Release
                 }
             }
-
+            dllFullPath = Path.Combine(dllFullPath, "compilerCore.dll");
             var DLL = Assembly.LoadFile(dllFullPath);
             var DLLType = DLL.GetType("compilerCore.Manager");
-            var compilerDLLInstance = Activator.CreateInstance(DLLType);
+            compilerDLLInstance = Activator.CreateInstance(DLLType);
             if (compilerDLLInstance != null)
             {
-                string exito = "Se armo";
+
             }
         }
 
         private void compileProgramToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //String[] compilationDetails = compiler.compileProgram(txtSrc.Text);
-            //txtOutput.Lines = compilationDetails;
+            String[] compilationDetails = compilerDLLInstance.compileProgram(txtSrc.Text);
+            txtOutput.Lines = compilationDetails;
         }
 
         private void txtSrc_TextChanged(object sender, EventArgs e)
@@ -209,12 +211,23 @@ namespace Compiler
 
         private string getPath()
         {
-            string processFullPath = "";
-            var currentProcess = Process.GetCurrentProcess();
-            if (System.Environment.Is64BitProcess)
+            string processFullPath = Application.StartupPath;
+            for (int i = 0; i < 4; i++)
             {
-                processFullPath = Path.Combine(Path.GetDirectoryName(currentProcess.MainModule.FileName), "compilerCore.dll");
+                processFullPath = Directory.GetParent(processFullPath).ToString();
             }
+            //var currentProcess = Process.GetCurrentProcess();
+            //if (System.Environment.Is64BitProcess)
+            //{
+            //    processFullPath = currentProcess.MainModule.FileName;
+            //    for (int i = 0; i < 5; i++)
+            //        processFullPath = Directory.GetParent(processFullPath).ToString();
+            //}
+            //else
+            //{
+            //    processFullPath = Application.StartupPath;
+            //}
+            processFullPath = Path.Combine(processFullPath, "DLL\\Binaries\\");
             return processFullPath;
         }
     }
