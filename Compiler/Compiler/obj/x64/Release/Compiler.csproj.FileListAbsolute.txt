@@ -1,0 +1,11 @@
+D:\IDV 6º\Segundo intento\Compiler\Compiler\bin\x64\Release\Compiler.exe.config
+D:\IDV 6º\Segundo intento\Compiler\Compiler\bin\x64\Release\Compiler.exe
+D:\IDV 6º\Segundo intento\Compiler\Compiler\bin\x64\Release\Compiler.pdb
+D:\IDV 6º\Segundo intento\Compiler\Compiler\obj\x64\Release\Compiler.Form1.resources
+D:\IDV 6º\Segundo intento\Compiler\Compiler\obj\x64\Release\Compiler.Properties.Resources.resources
+D:\IDV 6º\Segundo intento\Compiler\Compiler\obj\x64\Release\Compiler.csproj.GenerateResource.Cache
+D:\IDV 6º\Segundo intento\Compiler\Compiler\obj\x64\Release\Compiler.exe
+D:\IDV 6º\Segundo intento\Compiler\Compiler\obj\x64\Release\Compiler.pdb
+D:\IDV 6º\Segundo intento\Compiler\Compiler\bin\x64\Release\compilerCore.dll
+D:\IDV 6º\Segundo intento\Compiler\Compiler\bin\x64\Release\compilerCore.pdb
+D:\IDV 6º\Segundo intento\Compiler\Compiler\obj\x64\Release\Compiler.csprojResolveAssemblyReference.cache

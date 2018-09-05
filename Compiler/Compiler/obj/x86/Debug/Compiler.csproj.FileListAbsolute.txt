@@ -1,0 +1,2 @@
+C:\Users\Alumno14\Documents\Alberto Villa\Compiler\Compiler\bin\x86\Debug\Compiler.exe.config
+D:\IDV 6º\Segundo intento\Compiler\Compiler\bin\x86\Debug\Compiler.exe.config
