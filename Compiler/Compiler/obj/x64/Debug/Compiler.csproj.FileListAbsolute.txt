@@ -50,3 +50,6 @@ E:\IDV 6º\Segundo intento\Compilador\Compiler\Compiler\obj\x64\Debug\Compiler.c
 C:\Users\Lab 4 Alumno 15\Documents\Alberto Villa\Compilador\Compiler\Compiler\bin\x64\Debug\Compiler.exe.config
 C:\Users\Lab 4 Alumno 15\Documents\Alberto Villa\Compilador\Compiler\Compiler\obj\x64\Debug\Compiler.exe
 C:\Users\Lab 4 Alumno 15\Documents\Alberto Villa\Compilador\Compiler\Compiler\obj\x64\Debug\Compiler.pdb
+C:\Users\Lab 4 Alumno 9\Documents\Alberto Villa\Compilador\Compiler\Compiler\bin\x64\Debug\Compiler.exe.config
+C:\Users\Lab 4 Alumno 9\Documents\Alberto Villa\Compilador\Compiler\Compiler\obj\x64\Debug\Compiler.exe
+C:\Users\Lab 4 Alumno 9\Documents\Alberto Villa\Compilador\Compiler\Compiler\obj\x64\Debug\Compiler.pdb

@@ -21,8 +21,8 @@ namespace compilerCore {
 	private:
 		lexAnalyzer* m_lexAnalyzer;     // LEX ANALYZER INSTANCE
 		errorModule^ m_errorModule;		// ERRORS MODULE
-		void lexAnalysis(String ^ sourceCode);
-		cli::array<String ^> ^ getCompilationDetails();
+		void lexAnalysis(String^);
+		cli::array<String^>^ getCompilationDetails();
 
 	public:
 		Manager();

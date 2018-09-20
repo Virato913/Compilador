@@ -46,3 +46,15 @@ cli::array<String^>^ compilerCore::Manager::compileProgram(String^ sourceCode)
 
 	return compilationDetails;
 }
+
+void compilerCore::Manager::lexAnalysis(String^ sourceCode)
+{
+
+}
+
+cli::array<String^>^ compilerCore::Manager::getCompilationDetails()
+{
+	vector<token*>* tokens = new vector<token*>();
+	m_lexAnalyzer->getTokens(tokens);
+	return m_errorModule->Errors;
+}
