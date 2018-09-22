@@ -29,7 +29,7 @@ namespace compilerCore
 	public:
 
 		errorModule();
-		~errorModule();
+		//~errorModule();
 
 		void reset();
 		bool addErrorLex(int, const char*, const char*);

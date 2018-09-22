@@ -6,10 +6,13 @@ using std::string;
 
 namespace compilerCore
 {
-	enum TOKEN_TYPE
+	enum class TOKEN_TYPE
 	{
 		UNDEFINED = 0,
 		ID,
+		INT,
+		FLOAT,
+		STRING,
 		KEYWORD,
 		LOGICAL_OP,
 		UNARY_LOGICAL_OP,

@@ -14,10 +14,10 @@ compilerCore::errorModule::errorModule()
 	}
 }
 
-compilerCore::errorModule::~errorModule()
-{
-
-}
+//compilerCore::errorModule::~errorModule()
+//{
+//
+//}
 
 void compilerCore::errorModule::reset()
 {

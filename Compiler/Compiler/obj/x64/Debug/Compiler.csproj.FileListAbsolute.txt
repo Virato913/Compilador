@@ -53,3 +53,6 @@ C:\Users\Lab 4 Alumno 15\Documents\Alberto Villa\Compilador\Compiler\Compiler\ob
 C:\Users\Lab 4 Alumno 9\Documents\Alberto Villa\Compilador\Compiler\Compiler\bin\x64\Debug\Compiler.exe.config
 C:\Users\Lab 4 Alumno 9\Documents\Alberto Villa\Compilador\Compiler\Compiler\obj\x64\Debug\Compiler.exe
 C:\Users\Lab 4 Alumno 9\Documents\Alberto Villa\Compilador\Compiler\Compiler\obj\x64\Debug\Compiler.pdb
+C:\Users\Lab 4 Alumno 12\Documents\Alberto Villa\Compilador\Compiler\Compiler\bin\x64\Debug\Compiler.exe.config
+C:\Users\Lab 4 Alumno 12\Documents\Alberto Villa\Compilador\Compiler\Compiler\obj\x64\Debug\Compiler.exe
+C:\Users\Lab 4 Alumno 12\Documents\Alberto Villa\Compilador\Compiler\Compiler\obj\x64\Debug\Compiler.pdb

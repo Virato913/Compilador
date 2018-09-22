@@ -26,6 +26,21 @@ namespace compilerCore
 #define LEX_ERROR_INVALID_LOGICAL_OP_OR     "Invalid logical 'OR' operator."
 #define LEX_ERROR_INVALID_STATE             "Internal error. Invalid state."
 
+	enum class LEX_STATE
+	{
+		START = 0,
+		ID,
+		INT,
+		FLOAT,
+		STRING,
+		LOGICAL_OP,
+		ARIT_OP,
+		REL_OP,
+		DEL,
+		AGROUP_OP,
+		DIMEN_OP
+	};
+
 	// LEX analyzer class
 	class lexAnalyzer
 	{
