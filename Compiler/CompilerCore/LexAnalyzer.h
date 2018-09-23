@@ -38,7 +38,8 @@ namespace compilerCore
 		REL_OP,
 		DEL,
 		AGROUP_OP,
-		DIMEN_OP
+		DIMEN_OP,
+		COMMENT
 	};
 
 	// LEX analyzer class

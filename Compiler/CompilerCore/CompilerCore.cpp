@@ -49,12 +49,44 @@ cli::array<String^>^ compilerCore::Manager::compileProgram(String^ sourceCode)
 
 void compilerCore::Manager::lexAnalysis(String^ sourceCode)
 {
-
+	if (m_lexAnalyzer != nullptr)
+	{
+		m_lexAnalyzer->parseSourceCode((const char *)System::Runtime::InteropServices::Marshal::StringToHGlobalAnsi(sourceCode).ToPointer());
+	}
 }
 
 cli::array<String^>^ compilerCore::Manager::getCompilationDetails()
 {
 	vector<token*>* tokens = new vector<token*>();
 	m_lexAnalyzer->getTokens(tokens);
-	return m_errorModule->Errors;
+	cli::array<String^>^ tokenArray = gcnew cli::array<String^>(tokens->size());
+	int i = 0;
+	for (vector<token*>::iterator it = tokens->begin(); it != tokens->end(); ++it)
+	{
+		String^ lex = gcnew String((*it)->getLex().c_str());
+		String^ type = gcnew String((*it)->getTypeStr().c_str());
+		tokenArray->SetValue(String::Format("{0}@{1}@{2}", lex, type, (*it)->getLineNumber()), i);
+		i++;
+	}
+	int k = 0;
+	for (int i = 0; i < m_errorModule->Errors->Length; i++)
+	{
+		if (m_errorModule->Errors[i] != "")
+		{
+			k++;
+		}
+	}
+	cli::array<String^>^ compDetails = gcnew cli::array<String^>(k + tokens->size());
+	for (i = 0; i < m_errorModule->Errors->Length; i++)
+	{
+		if (m_errorModule->Errors[i] != "")
+		{
+			compDetails[i] = m_errorModule->Errors[i];
+		}
+	}
+	for (int j = 0; j < tokens->size(); j++)
+	{
+		compDetails[j + k] = tokenArray[j];
+	}
+	return compDetails;
 }

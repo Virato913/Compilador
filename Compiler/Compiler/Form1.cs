@@ -30,6 +30,9 @@ namespace Compiler
             srcChanged = false;
             fileSaved = false;
             saveFileDialog1.Filter = "Archivos de texto (*.txt)|*.txt|Todos los archivos (*.*)|*.*";
+            gridTokens.Columns.Add("Lex", "Lex");
+            gridTokens.Columns.Add("Line", "Line");
+            gridTokens.Columns.Add("Type", "Type");
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -70,8 +73,28 @@ namespace Compiler
 
         private void compileProgramToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            txtOutput.Clear();
+            gridTokens.Rows.Clear();
             String[] compilationDetails = compilerDLLInstance.compileProgram(txtSrc.Text);
-            txtOutput.Lines = compilationDetails;
+            for(int i=0;i<compilationDetails.Length;i++)
+            {
+                if(compilationDetails[i].Contains("<LEXIC_ANALYZER>"))
+                {
+                    txtOutput.Text += compilationDetails[i];
+                    txtOutput.Text += "\r\n";
+                }
+                else
+                {
+                    String[] token = compilationDetails[i].Split('@');
+                    int rowNum = gridTokens.Rows.Add();
+                    gridTokens.Rows[rowNum].Cells[0].Value = token[0];
+                    gridTokens.Rows[rowNum].Cells[2].Value = token[1];
+                    gridTokens.Rows[rowNum].Cells[1].Value = token[2];
+                }
+            }
+            gridTokens.AutoResizeColumns();
+            gridTokens.AutoResizeRows();
+            //txtOutput.Lines = compilationDetails;
         }
 
         private void txtSrc_TextChanged(object sender, EventArgs e)

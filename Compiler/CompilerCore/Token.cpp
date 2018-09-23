@@ -24,13 +24,13 @@ string compilerCore::token::getTypeStr()
 		return string("ID");
 		break;
 	case compilerCore::TOKEN_TYPE::INT:
-		return string("ID");
+		return string("Int");
 		break;
 	case compilerCore::TOKEN_TYPE::FLOAT:
-		return string("ID");
+		return string("Float");
 		break;
 	case compilerCore::TOKEN_TYPE::STRING:
-		return string("ID");
+		return string("String");
 		break;
 	case compilerCore::TOKEN_TYPE::KEYWORD:
 		return string("Keyword");
