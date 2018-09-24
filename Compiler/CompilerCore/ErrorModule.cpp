@@ -22,6 +22,10 @@ compilerCore::errorModule::errorModule()
 void compilerCore::errorModule::reset()
 {
 	m_numErrors = 0;
+	for (int i = 0; i < MAX_ERRORS; ++i)
+	{
+		m_errorsArray[i] = gcnew String("");
+	}
 }
 
 bool compilerCore::errorModule::addErrorLex(int lineNum, const char* desc, const char* line)

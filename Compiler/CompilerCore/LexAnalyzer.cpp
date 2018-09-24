@@ -51,6 +51,7 @@ bool compilerCore::lexAnalyzer::parseSourceCode(const char* sourceCode)
 	const char* currLine = sourceCode;
 	string buffer;
 	string lineBuffer;
+	string commentBuffer;
 	string line = sourceCode;
 	size_t errorPos = line.find('\n');
 	string errorLine = line.substr(0, errorPos - 1);
@@ -221,7 +222,7 @@ bool compilerCore::lexAnalyzer::parseSourceCode(const char* sourceCode)
 			}
 			else
 			{
-				if (isalpha(static_cast<unsigned char>(*currChar)) || *currChar == '.' || buffer.back() == '.')
+				if (isalpha(static_cast<unsigned char>(*currChar))/* || *currChar == '.'*/ || buffer.back() == '.')
 				{
 					//errorPos = line.find('\n');
 					//lineBuffer = line.substr(0, errorPos - 2);
@@ -343,7 +344,9 @@ bool compilerCore::lexAnalyzer::parseSourceCode(const char* sourceCode)
 			}
 			else if (*currChar == '*' && buffer.back() == '/')
 			{
-				buffer.append(currChar, 1);
+				//buffer.append(currChar, 1);
+				//buffer.clear();
+				commentBuffer.clear();
 				currChar++;
 				commentLine = lineNum;
 				lineBuffer = errorLine;
@@ -441,7 +444,7 @@ bool compilerCore::lexAnalyzer::parseSourceCode(const char* sourceCode)
 					errorPos = line.find('\n');
 					errorLine = line.substr(0, errorPos - 1);
 					lineNum++;
-					buffer.append(currChar, 1);
+					commentBuffer.append(currChar, 1);
 					currChar++;
 				}
 				else
@@ -462,14 +465,22 @@ bool compilerCore::lexAnalyzer::parseSourceCode(const char* sourceCode)
 			}
 			else
 			{
-				if (*currChar == '/' && buffer.back() == '*')
+				if (commentBuffer.size() > 0)
 				{
-					currChar++;
-					state = LEX_STATE::START;
+					if (*currChar == '/' && commentBuffer.back() == '*')
+					{
+						currChar++;
+						state = LEX_STATE::START;
+					}
+					else
+					{
+						commentBuffer.append(currChar, 1);
+						currChar++;
+					}
 				}
 				else
 				{
-					buffer.append(currChar, 1);
+					commentBuffer.append(currChar, 1);
 					currChar++;
 				}
 			}
