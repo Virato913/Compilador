@@ -321,7 +321,7 @@ bool compilerCore::lexAnalyzer::parseSourceCode(const char* sourceCode)
 			}
 			break;
 		case compilerCore::LEX_STATE::ARIT_OP:
-			if (isdigit(static_cast<unsigned char>(*currChar)) && buffer.back() == '-')
+			/*if (isdigit(static_cast<unsigned char>(*currChar)) && buffer.back() == '-')
 			{
 				buffer.append(currChar, 1);
 				currChar++;
@@ -333,7 +333,7 @@ bool compilerCore::lexAnalyzer::parseSourceCode(const char* sourceCode)
 				currChar++;
 				state = LEX_STATE::FLOAT;
 			}
-			else if ((*currChar == '+' || *currChar == '-') && *currChar == buffer.back())
+			else */if ((*currChar == '+' || *currChar == '-') && *currChar == buffer.back())
 			{
 				buffer.append(currChar, 1);
 				currChar++;

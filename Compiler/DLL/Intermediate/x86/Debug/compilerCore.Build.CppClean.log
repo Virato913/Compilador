@@ -1,23 +1,19 @@
-d:\idv 6º\segundo intento\compilador\compiler\dll\intermediate\x86\debug\compilercore.pch
-d:\idv 6º\segundo intento\compilador\compiler\dll\intermediate\x86\debug\vc140.pdb
-d:\idv 6º\segundo intento\compilador\compiler\dll\intermediate\x86\debug\stdafx.obj
-d:\idv 6º\segundo intento\compilador\compiler\dll\intermediate\x86\debug\compilercore.obj
-d:\idv 6º\segundo intento\compilador\compiler\dll\intermediate\x86\debug\assemblyinfo.obj
-d:\idv 6º\segundo intento\compilador\compiler\dll\intermediate\x86\debug\.netframework,version=v4.5.2.assemblyattributes.obj
-d:\idv 6º\segundo intento\compilador\compiler\dll\intermediate\x86\debug\.netframework,version=v4.5.2.assemblyattributes.asm
-d:\idv 6º\segundo intento\compilador\compiler\dll\binaries\x86\debug\compilercore.dll
-d:\idv 6º\segundo intento\compilador\compiler\dll\binaries\x86\debug\compilercore.pdb
-d:\idv 6º\segundo intento\compilador\compiler\dll\intermediate\x86\debug\app.res
-c:\users\casa\documents\beto\compiladores\compilador\compiler\dll\intermediate\x86\debug\compilercore.vcxprojresolveassemblyreference.cache
-c:\users\casa\documents\beto\compiladores\compilador\compiler\dll\intermediate\x86\debug\.netframework,version=v4.5.2.assemblyattributes.obj
-c:\users\casa\documents\beto\compiladores\compilador\compiler\dll\intermediate\x86\debug\assemblyinfo.obj
-c:\users\casa\documents\beto\compiladores\compilador\compiler\dll\intermediate\x86\debug\compilercore.obj
-c:\users\casa\documents\beto\compiladores\compilador\compiler\dll\intermediate\x86\debug\stdafx.obj
-c:\users\casa\documents\beto\compiladores\compilador\compiler\dll\intermediate\x86\debug\app.res
 c:\users\casa\documents\beto\compiladores\compilador\compiler\dll\intermediate\x86\debug\compilercore.pch
 c:\users\casa\documents\beto\compiladores\compilador\compiler\dll\intermediate\x86\debug\vc140.pdb
-c:\users\casa\documents\beto\compiladores\compilador\compiler\dll\binaries\x86\debug\compilercore.pdb
+c:\users\casa\documents\beto\compiladores\compilador\compiler\dll\intermediate\x86\debug\stdafx.obj
+c:\users\casa\documents\beto\compiladores\compilador\compiler\dll\intermediate\x86\debug\token.obj
+c:\users\casa\documents\beto\compiladores\compilador\compiler\dll\intermediate\x86\debug\symtable.obj
+c:\users\casa\documents\beto\compiladores\compilador\compiler\dll\intermediate\x86\debug\localnode.obj
+c:\users\casa\documents\beto\compiladores\compilador\compiler\dll\intermediate\x86\debug\lexanalyzer.obj
+c:\users\casa\documents\beto\compiladores\compilador\compiler\dll\intermediate\x86\debug\globalnode.obj
+c:\users\casa\documents\beto\compiladores\compilador\compiler\dll\intermediate\x86\debug\errormodule.obj
+c:\users\casa\documents\beto\compiladores\compilador\compiler\dll\intermediate\x86\debug\compilercore.obj
+c:\users\casa\documents\beto\compiladores\compilador\compiler\dll\intermediate\x86\debug\assemblyinfo.obj
+c:\users\casa\documents\beto\compiladores\compilador\compiler\dll\intermediate\x86\debug\.netframework,version=v4.5.2.assemblyattributes.obj
+c:\users\casa\documents\beto\compiladores\compilador\compiler\dll\intermediate\x86\debug\.netframework,version=v4.5.2.assemblyattributes.asm
 c:\users\casa\documents\beto\compiladores\compilador\compiler\dll\binaries\x86\debug\compilercore.dll
+c:\users\casa\documents\beto\compiladores\compilador\compiler\dll\binaries\x86\debug\compilercore.pdb
+c:\users\casa\documents\beto\compiladores\compilador\compiler\dll\intermediate\x86\debug\app.res
 c:\users\casa\documents\beto\compiladores\compilador\compiler\dll\intermediate\x86\debug\compilercore.tlog\cl.command.1.tlog
 c:\users\casa\documents\beto\compiladores\compilador\compiler\dll\intermediate\x86\debug\compilercore.tlog\cl.read.1.tlog
 c:\users\casa\documents\beto\compiladores\compilador\compiler\dll\intermediate\x86\debug\compilercore.tlog\cl.write.1.tlog

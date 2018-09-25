@@ -13,7 +13,6 @@ E:\IDV 6º\Segundo intento\Compilador\Compiler\Compiler\obj\x86\Debug\Compiler.p
 C:\Users\Casa\Documents\Beto\Compiladores\Compilador\Compiler\Compiler\bin\x86\Debug\Compiler.exe.config
 C:\Users\Casa\Documents\Beto\Compiladores\Compilador\Compiler\Compiler\bin\x86\Debug\Compiler.exe
 C:\Users\Casa\Documents\Beto\Compiladores\Compilador\Compiler\Compiler\bin\x86\Debug\Compiler.pdb
-C:\Users\Casa\Documents\Beto\Compiladores\Compilador\Compiler\Compiler\obj\x86\Debug\Compiler.csprojResolveAssemblyReference.cache
 C:\Users\Casa\Documents\Beto\Compiladores\Compilador\Compiler\Compiler\obj\x86\Debug\Compiler.Form1.resources
 C:\Users\Casa\Documents\Beto\Compiladores\Compilador\Compiler\Compiler\obj\x86\Debug\Compiler.Properties.Resources.resources
 C:\Users\Casa\Documents\Beto\Compiladores\Compilador\Compiler\Compiler\obj\x86\Debug\Compiler.csproj.GenerateResource.Cache
