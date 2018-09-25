@@ -9,6 +9,14 @@ Assembly System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e0
 	hash=None, flags=None
 Assembly System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
 	hash=None, flags=None
+Class compilerCore.errorModule: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.String[] Errors 'get ' : 
+  Methods:
+    reset(): PrivateScope, Public, HideBySig
+    addErrorLex(Int32, SByte*, SByte*): PrivateScope, Public, HideBySig
+    get_Errors(): PrivateScope, Public, HideBySig, SpecialName
 Class compilerCore.Manager: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
   Interfaces:
@@ -16,3 +24,13 @@ Class compilerCore.Manager: AutoLayout, AnsiClass, Class, Public, BeforeFieldIni
   Methods:
     compileProgram(String): PrivateScope, Public, HideBySig
     Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Struct compilerCore.ERROR_PHASE: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    compilerCore.ERROR_PHASE UNDEFINED = 0 : Public, Static, Literal, HasDefault
+    compilerCore.ERROR_PHASE LEXIC_ANALYZER = 1 : Public, Static, Literal, HasDefault
+    compilerCore.ERROR_PHASE SYNTAX_ANALYZER = 2 : Public, Static, Literal, HasDefault
+    compilerCore.ERROR_PHASE SEMANTIC_ANALYZER = 3 : Public, Static, Literal, HasDefault
+    compilerCore.ERROR_PHASE CODE_GENERATION = 4 : Public, Static, Literal, HasDefault
+    compilerCore.ERROR_PHASE SIZE = 5 : Public, Static, Literal, HasDefault

@@ -1,7 +1,15 @@
 ﻿  Stdafx.cpp
   AssemblyInfo.cpp
   CompilerCore.cpp
+CompilerCore.cpp(62): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+CompilerCore.cpp(79): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  ErrorModule.cpp
+  GlobalNode.cpp
+  LexAnalyzer.cpp
+  LocalNode.cpp
+  SymTable.cpp
+  Token.cpp
   Generating Code...
   .NETFramework,Version=v4.5.2.AssemblyAttributes.cpp
-  CompilerCore.vcxproj -> D:\IDV 6º\Segundo intento\Compiler\DLL\Binaries\x64\Release\compilerCore.dll
-  CompilerCore.vcxproj -> D:\IDV 6º\Segundo intento\Compiler\DLL\Binaries\x64\Release\compilerCore.pdb (Full PDB)
+  CompilerCore.vcxproj -> C:\Users\Casa\Documents\Beto\Compiladores\Compilador\Compiler\DLL\Binaries\x64\Release\compilerCore.dll
+  CompilerCore.vcxproj -> C:\Users\Casa\Documents\Beto\Compiladores\Compilador\Compiler\DLL\Binaries\x64\Release\compilerCore.pdb (Full PDB)

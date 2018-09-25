@@ -1,8 +1,15 @@
 ﻿  Stdafx.cpp
   AssemblyInfo.cpp
   CompilerCore.cpp
+CompilerCore.cpp(87): warning C4018: '<': signed/unsigned mismatch
+  ErrorModule.cpp
+  GlobalNode.cpp
+  LexAnalyzer.cpp
+  LocalNode.cpp
+  SymTable.cpp
+  Token.cpp
   Generating Code...
   .NETFramework,Version=v4.5.2.AssemblyAttributes.cpp
   AssemblyInfo.obj : /DEBUG:FASTLINK is not supported when managed code is present; restarting link with /DEBUG:FULL
-  CompilerCore.vcxproj -> D:\IDV 6º\Segundo intento\Compilador\Compiler\DLL\Binaries\x86\Debug\compilerCore.dll
-  CompilerCore.vcxproj -> D:\IDV 6º\Segundo intento\Compilador\Compiler\DLL\Binaries\x86\Debug\compilerCore.pdb (Partial PDB)
+  CompilerCore.vcxproj -> C:\Users\Casa\Documents\Beto\Compiladores\Compilador\Compiler\DLL\Binaries\x86\Debug\compilerCore.dll
+  CompilerCore.vcxproj -> C:\Users\Casa\Documents\Beto\Compiladores\Compilador\Compiler\DLL\Binaries\x86\Debug\compilerCore.pdb (Partial PDB)

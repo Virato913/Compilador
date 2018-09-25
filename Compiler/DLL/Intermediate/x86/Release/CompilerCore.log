@@ -1,7 +1,14 @@
 ﻿  Stdafx.cpp
   AssemblyInfo.cpp
   CompilerCore.cpp
+CompilerCore.cpp(87): warning C4018: '<': signed/unsigned mismatch
+  ErrorModule.cpp
+  GlobalNode.cpp
+  LexAnalyzer.cpp
+  LocalNode.cpp
+  SymTable.cpp
+  Token.cpp
   Generating Code...
   .NETFramework,Version=v4.5.2.AssemblyAttributes.cpp
-  CompilerCore.vcxproj -> E:\IDV 6º\Segundo intento\Compilador\Compiler\DLL\Binaries\x86\Release\compilerCore.dll
-  CompilerCore.vcxproj -> E:\IDV 6º\Segundo intento\Compilador\Compiler\DLL\Binaries\x86\Release\compilerCore.pdb (Full PDB)
+  CompilerCore.vcxproj -> C:\Users\Casa\Documents\Beto\Compiladores\Compilador\Compiler\DLL\Binaries\x86\Release\compilerCore.dll
+  CompilerCore.vcxproj -> C:\Users\Casa\Documents\Beto\Compiladores\Compilador\Compiler\DLL\Binaries\x86\Release\compilerCore.pdb (Full PDB)
