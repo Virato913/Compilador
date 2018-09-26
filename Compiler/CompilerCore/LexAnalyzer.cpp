@@ -333,15 +333,15 @@ bool compilerCore::lexAnalyzer::parseSourceCode(const char* sourceCode)
 				currChar++;
 				state = LEX_STATE::FLOAT;
 			}
-			else if ((*currChar == '+' || *currChar == '-') && *currChar == buffer.back())
-			{
-				buffer.append(currChar, 1);
-				currChar++;
-				newToken = new token(buffer, compilerCore::TOKEN_TYPE::ARIT_OP, lineNum);
-				m_Tokens.push_back(newToken);
-				buffer.clear();
-				state = LEX_STATE::START;
-			}
+			//else if ((*currChar == '+' || *currChar == '-') && *currChar == buffer.back())
+			//{
+			//	buffer.append(currChar, 1);
+			//	currChar++;
+			//	newToken = new token(buffer, compilerCore::TOKEN_TYPE::ARIT_OP, lineNum);
+			//	m_Tokens.push_back(newToken);
+			//	buffer.clear();
+			//	state = LEX_STATE::START;
+			//}
 			else if (*currChar == '*' && buffer.back() == '/')
 			{
 				//buffer.append(currChar, 1);

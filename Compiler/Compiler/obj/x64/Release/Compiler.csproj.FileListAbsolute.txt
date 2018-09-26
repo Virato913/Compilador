@@ -31,7 +31,6 @@ C:\Users\Lab 4 Alumno 2\Documents\Alberto Villa\New folder\Compilador\Compiler\C
 C:\Users\Lab 1 Alumno 11\Documents\Alberto Villa\New folder\Compilador\Compiler\Compiler\bin\x64\Release\Compiler.exe.config
 C:\Users\Lab 1 Alumno 11\Documents\Alberto Villa\New folder\Compilador\Compiler\Compiler\bin\x64\Release\Compiler.exe
 C:\Users\Lab 1 Alumno 11\Documents\Alberto Villa\New folder\Compilador\Compiler\Compiler\bin\x64\Release\Compiler.pdb
-C:\Users\Lab 1 Alumno 11\Documents\Alberto Villa\New folder\Compilador\Compiler\Compiler\obj\x64\Release\Compiler.csprojResolveAssemblyReference.cache
 C:\Users\Lab 1 Alumno 11\Documents\Alberto Villa\New folder\Compilador\Compiler\Compiler\obj\x64\Release\Compiler.Form1.resources
 C:\Users\Lab 1 Alumno 11\Documents\Alberto Villa\New folder\Compilador\Compiler\Compiler\obj\x64\Release\Compiler.Properties.Resources.resources
 C:\Users\Lab 1 Alumno 11\Documents\Alberto Villa\New folder\Compilador\Compiler\Compiler\obj\x64\Release\Compiler.csproj.GenerateResource.Cache
