@@ -10,5 +10,5 @@ CompilerCore.cpp(87): warning C4018: '<': signed/unsigned mismatch
   Token.cpp
   Generating Code...
   .NETFramework,Version=v4.5.2.AssemblyAttributes.cpp
-  CompilerCore.vcxproj -> C:\Users\Casa\Documents\Beto\Compiladores\Compilador\Compiler\DLL\Binaries\x86\Release\compilerCore.dll
-  CompilerCore.vcxproj -> C:\Users\Casa\Documents\Beto\Compiladores\Compilador\Compiler\DLL\Binaries\x86\Release\compilerCore.pdb (Full PDB)
+  CompilerCore.vcxproj -> C:\Users\Lab 4 Alumno 2\Documents\Alberto Villa\New folder\Compilador\Compiler\DLL\Binaries\x86\Release\compilerCore.dll
+  CompilerCore.vcxproj -> C:\Users\Lab 4 Alumno 2\Documents\Alberto Villa\New folder\Compilador\Compiler\DLL\Binaries\x86\Release\compilerCore.pdb (Full PDB)

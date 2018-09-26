@@ -11,5 +11,5 @@ CompilerCore.cpp(79): warning C4267: 'argument': conversion from 'size_t' to 'in
   Token.cpp
   Generating Code...
   .NETFramework,Version=v4.5.2.AssemblyAttributes.cpp
-  CompilerCore.vcxproj -> C:\Users\Casa\Documents\Beto\Compiladores\Compilador\Compiler\DLL\Binaries\x64\Release\compilerCore.dll
-  CompilerCore.vcxproj -> C:\Users\Casa\Documents\Beto\Compiladores\Compilador\Compiler\DLL\Binaries\x64\Release\compilerCore.pdb (Full PDB)
+  CompilerCore.vcxproj -> C:\Users\Lab 4 Alumno 2\Documents\Alberto Villa\New folder\Compilador\Compiler\DLL\Binaries\x64\Release\compilerCore.dll
+  CompilerCore.vcxproj -> C:\Users\Lab 4 Alumno 2\Documents\Alberto Villa\New folder\Compilador\Compiler\DLL\Binaries\x64\Release\compilerCore.pdb (Full PDB)

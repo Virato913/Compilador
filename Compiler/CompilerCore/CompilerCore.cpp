@@ -65,7 +65,7 @@ cli::array<String^>^ compilerCore::Manager::getCompilationDetails()
 	{
 		String^ lex = gcnew String((*it)->getLex().c_str());
 		String^ type = gcnew String((*it)->getTypeStr().c_str());
-		tokenArray->SetValue(String::Format("{0}@{1}@{2}", lex, type, (*it)->getLineNumber()), i);
+		tokenArray->SetValue(String::Format("{0} {1} {2}", lex, type, (*it)->getLineNumber()), i);
 		i++;
 	}
 	int k = 0;
@@ -88,5 +88,36 @@ cli::array<String^>^ compilerCore::Manager::getCompilationDetails()
 	{
 		compDetails[j + k] = tokenArray[j];
 	}
+	return compDetails;
+}
+
+cli::array<cli::array<String^>^, 2>^ compilerCore::Manager::compile(String^ sourceCode)
+{
+	//cli::array<String^>^ compilationDetails = gcnew cli::array<String^>(1);
+	//compilationDetails[0] = gcnew String("Hola mundo.");
+	//return compilationDetails;
+	cli::array<cli::array<String^>^, 2>^ compilationDetails;
+
+	// Clear state if all pointers are valid
+	if (m_errorModule && m_lexAnalyzer != nullptr)
+	{
+		m_errorModule->reset();
+		m_lexAnalyzer->reset();
+	}
+	else
+	{
+		// invalid pointers, return error...
+	}
+
+	lexAnalysis(sourceCode);
+
+	compilationDetails = getCompDetails();
+
+	return compilationDetails;
+}
+
+cli::array<cli::array<String^>^, 2>^ compilerCore::Manager::getCompDetails()
+{
+	cli::array<cli::array<String^>^, 2>^ compDetails = gcnew cli::array<cli::array<String^>^, 2>(1, 1);
 	return compDetails;
 }

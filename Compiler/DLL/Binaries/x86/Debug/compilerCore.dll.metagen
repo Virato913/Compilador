@@ -23,6 +23,7 @@ Class compilerCore.Manager: AutoLayout, AnsiClass, Class, Public, BeforeFieldIni
     System.IDisposable
   Methods:
     compileProgram(String): PrivateScope, Public, HideBySig
+    compile(String): PrivateScope, Public, HideBySig
     Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
 Struct compilerCore.ERROR_PHASE: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
   :System.Enum

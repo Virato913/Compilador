@@ -23,10 +23,12 @@ namespace compilerCore {
 		errorModule^ m_errorModule;		// ERRORS MODULE
 		void lexAnalysis(String^);
 		cli::array<String^>^ getCompilationDetails();
+		cli::array<cli::array<String^>^, 2>^ getCompDetails();
 
 	public:
 		Manager();
 		~Manager();
 		cli::array<String^>^ compileProgram(String^ sourceCode);
+		cli::array<cli::array<String^>^, 2>^ compile(String^ sourceCode);
 	};
 }

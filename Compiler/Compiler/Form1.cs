@@ -85,7 +85,7 @@ namespace Compiler
                 }
                 else
                 {
-                    String[] token = compilationDetails[i].Split('@');
+                    String[] token = compilationDetails[i].Split(' ');
                     int rowNum = gridTokens.Rows.Add();
                     gridTokens.Rows[rowNum].Cells[0].Value = token[0];
                     gridTokens.Rows[rowNum].Cells[2].Value = token[1];

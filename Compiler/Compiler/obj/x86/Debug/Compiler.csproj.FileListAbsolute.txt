@@ -18,3 +18,11 @@ C:\Users\Casa\Documents\Beto\Compiladores\Compilador\Compiler\Compiler\obj\x86\D
 C:\Users\Casa\Documents\Beto\Compiladores\Compilador\Compiler\Compiler\obj\x86\Debug\Compiler.csproj.GenerateResource.Cache
 C:\Users\Casa\Documents\Beto\Compiladores\Compilador\Compiler\Compiler\obj\x86\Debug\Compiler.exe
 C:\Users\Casa\Documents\Beto\Compiladores\Compilador\Compiler\Compiler\obj\x86\Debug\Compiler.pdb
+C:\Users\Lab 4 Alumno 2\Documents\Alberto Villa\New folder\Compilador\Compiler\Compiler\bin\x86\Debug\Compiler.exe.config
+C:\Users\Lab 4 Alumno 2\Documents\Alberto Villa\New folder\Compilador\Compiler\Compiler\bin\x86\Debug\Compiler.exe
+C:\Users\Lab 4 Alumno 2\Documents\Alberto Villa\New folder\Compilador\Compiler\Compiler\bin\x86\Debug\Compiler.pdb
+C:\Users\Lab 4 Alumno 2\Documents\Alberto Villa\New folder\Compilador\Compiler\Compiler\obj\x86\Debug\Compiler.Form1.resources
+C:\Users\Lab 4 Alumno 2\Documents\Alberto Villa\New folder\Compilador\Compiler\Compiler\obj\x86\Debug\Compiler.Properties.Resources.resources
+C:\Users\Lab 4 Alumno 2\Documents\Alberto Villa\New folder\Compilador\Compiler\Compiler\obj\x86\Debug\Compiler.csproj.GenerateResource.Cache
+C:\Users\Lab 4 Alumno 2\Documents\Alberto Villa\New folder\Compilador\Compiler\Compiler\obj\x86\Debug\Compiler.exe
+C:\Users\Lab 4 Alumno 2\Documents\Alberto Villa\New folder\Compilador\Compiler\Compiler\obj\x86\Debug\Compiler.pdb

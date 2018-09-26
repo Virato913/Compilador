@@ -11,18 +11,34 @@ c:\users\casa\documents\beto\compiladores\compilador\compiler\dll\intermediate\x
 c:\users\casa\documents\beto\compiladores\compilador\compiler\dll\intermediate\x64\release\assemblyinfo.obj
 c:\users\casa\documents\beto\compiladores\compilador\compiler\dll\intermediate\x64\release\.netframework,version=v4.5.2.assemblyattributes.obj
 c:\users\casa\documents\beto\compiladores\compilador\compiler\dll\intermediate\x64\release\.netframework,version=v4.5.2.assemblyattributes.asm
+c:\users\lab 4 alumno 2\documents\alberto villa\new folder\compilador\compiler\dll\intermediate\x64\release\compilercore.pch
+c:\users\lab 4 alumno 2\documents\alberto villa\new folder\compilador\compiler\dll\intermediate\x64\release\vc140.pdb
+c:\users\lab 4 alumno 2\documents\alberto villa\new folder\compilador\compiler\dll\intermediate\x64\release\stdafx.obj
+c:\users\lab 4 alumno 2\documents\alberto villa\new folder\compilador\compiler\dll\intermediate\x64\release\token.obj
+c:\users\lab 4 alumno 2\documents\alberto villa\new folder\compilador\compiler\dll\intermediate\x64\release\symtable.obj
+c:\users\lab 4 alumno 2\documents\alberto villa\new folder\compilador\compiler\dll\intermediate\x64\release\localnode.obj
+c:\users\lab 4 alumno 2\documents\alberto villa\new folder\compilador\compiler\dll\intermediate\x64\release\lexanalyzer.obj
+c:\users\lab 4 alumno 2\documents\alberto villa\new folder\compilador\compiler\dll\intermediate\x64\release\globalnode.obj
+c:\users\lab 4 alumno 2\documents\alberto villa\new folder\compilador\compiler\dll\intermediate\x64\release\errormodule.obj
+c:\users\lab 4 alumno 2\documents\alberto villa\new folder\compilador\compiler\dll\intermediate\x64\release\compilercore.obj
+c:\users\lab 4 alumno 2\documents\alberto villa\new folder\compilador\compiler\dll\intermediate\x64\release\assemblyinfo.obj
+c:\users\lab 4 alumno 2\documents\alberto villa\new folder\compilador\compiler\dll\intermediate\x64\release\.netframework,version=v4.5.2.assemblyattributes.obj
+c:\users\lab 4 alumno 2\documents\alberto villa\new folder\compilador\compiler\dll\intermediate\x64\release\.netframework,version=v4.5.2.assemblyattributes.asm
 c:\users\casa\documents\beto\compiladores\compilador\compiler\dll\binaries\x64\release\compilercore.dll
 c:\users\casa\documents\beto\compiladores\compilador\compiler\dll\binaries\x64\release\compilercore.pdb
+c:\users\lab 4 alumno 2\documents\alberto villa\new folder\compilador\compiler\dll\binaries\x64\release\compilercore.dll
+c:\users\lab 4 alumno 2\documents\alberto villa\new folder\compilador\compiler\dll\binaries\x64\release\compilercore.pdb
 c:\users\casa\documents\beto\compiladores\compilador\compiler\dll\intermediate\x64\release\app.res
-c:\users\casa\documents\beto\compiladores\compilador\compiler\dll\intermediate\x64\release\compilercore.tlog\cl.command.1.tlog
-c:\users\casa\documents\beto\compiladores\compilador\compiler\dll\intermediate\x64\release\compilercore.tlog\cl.read.1.tlog
-c:\users\casa\documents\beto\compiladores\compilador\compiler\dll\intermediate\x64\release\compilercore.tlog\cl.write.1.tlog
-c:\users\casa\documents\beto\compiladores\compilador\compiler\dll\intermediate\x64\release\compilercore.tlog\link.command.1.tlog
-c:\users\casa\documents\beto\compiladores\compilador\compiler\dll\intermediate\x64\release\compilercore.tlog\link.read.1.tlog
-c:\users\casa\documents\beto\compiladores\compilador\compiler\dll\intermediate\x64\release\compilercore.tlog\link.write.1.tlog
-c:\users\casa\documents\beto\compiladores\compilador\compiler\dll\intermediate\x64\release\compilercore.tlog\metagen.read.1.tlog
-c:\users\casa\documents\beto\compiladores\compilador\compiler\dll\intermediate\x64\release\compilercore.tlog\metagen.write.1.tlog
-c:\users\casa\documents\beto\compiladores\compilador\compiler\dll\intermediate\x64\release\compilercore.tlog\rc.command.1.tlog
-c:\users\casa\documents\beto\compiladores\compilador\compiler\dll\intermediate\x64\release\compilercore.tlog\rc.read.1.tlog
-c:\users\casa\documents\beto\compiladores\compilador\compiler\dll\intermediate\x64\release\compilercore.tlog\rc.write.1.tlog
-c:\users\casa\documents\beto\compiladores\compilador\compiler\dll\intermediate\x64\release\compilercore.tlog\tzres.dll.bi
+c:\users\lab 4 alumno 2\documents\alberto villa\new folder\compilador\compiler\dll\intermediate\x64\release\app.res
+c:\users\lab 4 alumno 2\documents\alberto villa\new folder\compilador\compiler\dll\intermediate\x64\release\compilercore.tlog\cl.command.1.tlog
+c:\users\lab 4 alumno 2\documents\alberto villa\new folder\compilador\compiler\dll\intermediate\x64\release\compilercore.tlog\cl.read.1.tlog
+c:\users\lab 4 alumno 2\documents\alberto villa\new folder\compilador\compiler\dll\intermediate\x64\release\compilercore.tlog\cl.write.1.tlog
+c:\users\lab 4 alumno 2\documents\alberto villa\new folder\compilador\compiler\dll\intermediate\x64\release\compilercore.tlog\link.command.1.tlog
+c:\users\lab 4 alumno 2\documents\alberto villa\new folder\compilador\compiler\dll\intermediate\x64\release\compilercore.tlog\link.read.1.tlog
+c:\users\lab 4 alumno 2\documents\alberto villa\new folder\compilador\compiler\dll\intermediate\x64\release\compilercore.tlog\link.write.1.tlog
+c:\users\lab 4 alumno 2\documents\alberto villa\new folder\compilador\compiler\dll\intermediate\x64\release\compilercore.tlog\metagen.read.1.tlog
+c:\users\lab 4 alumno 2\documents\alberto villa\new folder\compilador\compiler\dll\intermediate\x64\release\compilercore.tlog\metagen.write.1.tlog
+c:\users\lab 4 alumno 2\documents\alberto villa\new folder\compilador\compiler\dll\intermediate\x64\release\compilercore.tlog\rc.command.1.tlog
+c:\users\lab 4 alumno 2\documents\alberto villa\new folder\compilador\compiler\dll\intermediate\x64\release\compilercore.tlog\rc.read.1.tlog
+c:\users\lab 4 alumno 2\documents\alberto villa\new folder\compilador\compiler\dll\intermediate\x64\release\compilercore.tlog\rc.write.1.tlog
+c:\users\lab 4 alumno 2\documents\alberto villa\new folder\compilador\compiler\dll\intermediate\x64\release\compilercore.tlog\tzres.dll.bi

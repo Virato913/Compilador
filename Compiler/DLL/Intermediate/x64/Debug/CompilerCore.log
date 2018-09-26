@@ -12,5 +12,5 @@ CompilerCore.cpp(79): warning C4267: 'argument': conversion from 'size_t' to 'in
   Generating Code...
   .NETFramework,Version=v4.5.2.AssemblyAttributes.cpp
   AssemblyInfo.obj : /DEBUG:FASTLINK is not supported when managed code is present; restarting link with /DEBUG:FULL
-  CompilerCore.vcxproj -> C:\Users\Casa\Documents\Beto\Compiladores\Compilador\Compiler\DLL\Binaries\x64\Debug\compilerCore.dll
-  CompilerCore.vcxproj -> C:\Users\Casa\Documents\Beto\Compiladores\Compilador\Compiler\DLL\Binaries\x64\Debug\compilerCore.pdb (Partial PDB)
+  CompilerCore.vcxproj -> C:\Users\Lab 4 Alumno 2\Documents\Alberto Villa\New folder\Compilador\Compiler\DLL\Binaries\x64\Debug\compilerCore.dll
+  CompilerCore.vcxproj -> C:\Users\Lab 4 Alumno 2\Documents\Alberto Villa\New folder\Compilador\Compiler\DLL\Binaries\x64\Debug\compilerCore.pdb (Partial PDB)
