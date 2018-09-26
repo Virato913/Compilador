@@ -75,3 +75,12 @@ C:\Users\Lab 4 Alumno 2\Documents\Alberto Villa\New folder\Compilador\Compiler\C
 C:\Users\Lab 4 Alumno 2\Documents\Alberto Villa\New folder\Compilador\Compiler\Compiler\obj\x64\Debug\Compiler.csproj.GenerateResource.Cache
 C:\Users\Lab 4 Alumno 2\Documents\Alberto Villa\New folder\Compilador\Compiler\Compiler\obj\x64\Debug\Compiler.exe
 C:\Users\Lab 4 Alumno 2\Documents\Alberto Villa\New folder\Compilador\Compiler\Compiler\obj\x64\Debug\Compiler.pdb
+C:\Users\Lab 1 Alumno 11\Documents\Alberto Villa\New folder\Compilador\Compiler\Compiler\bin\x64\Debug\Compiler.exe.config
+C:\Users\Lab 1 Alumno 11\Documents\Alberto Villa\New folder\Compilador\Compiler\Compiler\bin\x64\Debug\Compiler.exe
+C:\Users\Lab 1 Alumno 11\Documents\Alberto Villa\New folder\Compilador\Compiler\Compiler\obj\x64\Debug\Compiler.csprojResolveAssemblyReference.cache
+C:\Users\Lab 1 Alumno 11\Documents\Alberto Villa\New folder\Compilador\Compiler\Compiler\obj\x64\Debug\Compiler.Form1.resources
+C:\Users\Lab 1 Alumno 11\Documents\Alberto Villa\New folder\Compilador\Compiler\Compiler\obj\x64\Debug\Compiler.Properties.Resources.resources
+C:\Users\Lab 1 Alumno 11\Documents\Alberto Villa\New folder\Compilador\Compiler\Compiler\obj\x64\Debug\Compiler.csproj.GenerateResource.Cache
+C:\Users\Lab 1 Alumno 11\Documents\Alberto Villa\New folder\Compilador\Compiler\Compiler\obj\x64\Debug\Compiler.exe
+C:\Users\Lab 1 Alumno 11\Documents\Alberto Villa\New folder\Compilador\Compiler\Compiler\obj\x64\Debug\Compiler.pdb
+C:\Users\Lab 1 Alumno 11\Documents\Alberto Villa\New folder\Compilador\Compiler\Compiler\bin\x64\Debug\Compiler.pdb

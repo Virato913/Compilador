@@ -51,7 +51,12 @@ void compilerCore::Manager::lexAnalysis(String^ sourceCode)
 {
 	if (m_lexAnalyzer != nullptr)
 	{
-		m_lexAnalyzer->parseSourceCode((const char *)System::Runtime::InteropServices::Marshal::StringToHGlobalAnsi(sourceCode).ToPointer());
+		if (!m_lexAnalyzer->parseSourceCode((const char *)System::Runtime::InteropServices::Marshal::StringToHGlobalAnsi(sourceCode).ToPointer()))
+		{
+			m_errorModule->reset();
+			m_lexAnalyzer->reset();
+			m_errorModule->addErrorLex(0, "Max errors reached", "");
+		}
 	}
 }
 

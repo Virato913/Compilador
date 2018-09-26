@@ -321,7 +321,7 @@ bool compilerCore::lexAnalyzer::parseSourceCode(const char* sourceCode)
 			}
 			break;
 		case compilerCore::LEX_STATE::ARIT_OP:
-			/*if (isdigit(static_cast<unsigned char>(*currChar)) && buffer.back() == '-')
+			if (isdigit(static_cast<unsigned char>(*currChar)) && buffer.back() == '-')
 			{
 				buffer.append(currChar, 1);
 				currChar++;
@@ -333,7 +333,7 @@ bool compilerCore::lexAnalyzer::parseSourceCode(const char* sourceCode)
 				currChar++;
 				state = LEX_STATE::FLOAT;
 			}
-			else */if ((*currChar == '+' || *currChar == '-') && *currChar == buffer.back())
+			else if ((*currChar == '+' || *currChar == '-') && *currChar == buffer.back())
 			{
 				buffer.append(currChar, 1);
 				currChar++;
@@ -494,7 +494,7 @@ bool compilerCore::lexAnalyzer::parseSourceCode(const char* sourceCode)
 
 void compilerCore::lexAnalyzer::reset()
 {
-	m_errorModule->reset();
+	//m_errorModule->reset();
 	m_Tokens.clear();
 	//m_Tokens.resize(0);
 }
@@ -541,5 +541,5 @@ bool isBlank(const char currChar)
 
 bool isValidChar(const char currChar)
 {
-	return (isalnum(currChar) || isLogical(currChar) || isArithmetic(currChar) || isRelational(currChar) || isDelimiter(currChar) || isGrouping(currChar) || isDimensional(currChar) || isBlank(currChar) || currChar == '_' || currChar == '"');
+	return (isalnum(static_cast<unsigned char>(currChar)) || isLogical(currChar) || isArithmetic(currChar) || isRelational(currChar) || isDelimiter(currChar) || isGrouping(currChar) || isDimensional(currChar) || isBlank(currChar) || currChar == '_' || currChar == '"');
 }
