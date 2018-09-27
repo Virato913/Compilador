@@ -191,7 +191,7 @@ bool compilerCore::lexAnalyzer::parseSourceCode(const char* sourceCode)
 			}
 			else
 			{
-				if (isalpha(static_cast<unsigned char>(*currChar)))
+				if (isalpha(static_cast<unsigned char>(*currChar)) || *currChar == '_')
 				{
 					//errorPos = line.find('\n');
 					//lineBuffer = line.substr(0, errorPos - 2);
@@ -203,7 +203,7 @@ bool compilerCore::lexAnalyzer::parseSourceCode(const char* sourceCode)
 					{
 						return false;
 					}
-					currChar++;
+					//currChar++;
 				}
 				else
 				{
@@ -250,8 +250,19 @@ bool compilerCore::lexAnalyzer::parseSourceCode(const char* sourceCode)
 			{
 				if (*currChar != '\r')
 				{
-					buffer.append(currChar, 1);
-					currChar++;
+					if (*currChar != '\0')
+					{
+						buffer.append(currChar, 1);
+						currChar++;
+					}
+					else
+					{
+						if (!m_errorModule->addErrorLex(lineNum, LEX_ERROR_STRING_NOT_CLOSED, errorLine.c_str()))
+						{
+							return false;
+						}
+						buffer.clear();
+					}
 				}
 				else
 				{
@@ -307,7 +318,7 @@ bool compilerCore::lexAnalyzer::parseSourceCode(const char* sourceCode)
 						return false;
 					}
 				}
-				currChar++;
+				buffer.clear();
 				state = LEX_STATE::START;
 			}
 			else

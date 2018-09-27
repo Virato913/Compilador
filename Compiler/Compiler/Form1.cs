@@ -65,36 +65,35 @@ namespace Compiler
             var DLL = Assembly.LoadFile(dllFullPath);
             var DLLType = DLL.GetType("compilerCore.Manager");
             compilerDLLInstance = Activator.CreateInstance(DLLType);
-            if (compilerDLLInstance != null)
-            {
-
-            }
         }
 
         private void compileProgramToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            txtOutput.Clear();
-            gridTokens.Rows.Clear();
-            String[] compilationDetails = compilerDLLInstance.compileProgram(txtSrc.Text);
-            for(int i=0;i<compilationDetails.Length;i++)
+            if (compilerDLLInstance != null)
             {
-                if(compilationDetails[i].Contains("<LEXIC_ANALYZER>"))
+                txtOutput.Clear();
+                gridTokens.Rows.Clear();
+                String[] compilationDetails = compilerDLLInstance.compileProgram(txtSrc.Text);
+                for (int i = 0; i < compilationDetails.Length; i++)
                 {
-                    txtOutput.Text += compilationDetails[i];
-                    txtOutput.Text += "\r\n";
+                    if (compilationDetails[i].Contains("<LEXIC_ANALYZER>"))
+                    {
+                        txtOutput.Text += compilationDetails[i];
+                        txtOutput.Text += "\r\n";
+                    }
+                    else
+                    {
+                        String[] token = compilationDetails[i].Split(' ');
+                        int rowNum = gridTokens.Rows.Add();
+                        gridTokens.Rows[rowNum].Cells[0].Value = token[0];
+                        gridTokens.Rows[rowNum].Cells[2].Value = token[1];
+                        gridTokens.Rows[rowNum].Cells[1].Value = token[2];
+                    }
                 }
-                else
-                {
-                    String[] token = compilationDetails[i].Split(' ');
-                    int rowNum = gridTokens.Rows.Add();
-                    gridTokens.Rows[rowNum].Cells[0].Value = token[0];
-                    gridTokens.Rows[rowNum].Cells[2].Value = token[1];
-                    gridTokens.Rows[rowNum].Cells[1].Value = token[2];
-                }
+                gridTokens.AutoResizeColumns();
+                gridTokens.AutoResizeRows();
+                //txtOutput.Lines = compilationDetails;
             }
-            gridTokens.AutoResizeColumns();
-            gridTokens.AutoResizeRows();
-            //txtOutput.Lines = compilationDetails;
         }
 
         private void txtSrc_TextChanged(object sender, EventArgs e)
