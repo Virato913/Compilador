@@ -32,7 +32,7 @@ namespace compilerCore
 		int m_LineNumber;
 
 	public:
-		token(string, TOKEN_TYPE, int);
+		token(string lex, TOKEN_TYPE type, int lineNum);
 		~token();
 
 		string getLex() const { return m_Lex; }

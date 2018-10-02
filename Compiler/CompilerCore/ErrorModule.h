@@ -24,7 +24,7 @@ namespace compilerCore
 		int m_numErrors;
 		cli::array<String^>^ m_errorsArray;
 
-		bool addError(ERROR_PHASE, int, String^, String^);
+		bool addError(ERROR_PHASE errorPhase, int lineNumber, String^ errorDesc, String^ errorLine);
 
 	public:
 
@@ -32,7 +32,7 @@ namespace compilerCore
 		//~errorModule();
 
 		void reset();
-		bool addErrorLex(int, const char*, const char*);
+		bool addErrorLex(int lineNum, const char* desc, const char* line);
 
 		property cli::array<String^>^ Errors
 		{

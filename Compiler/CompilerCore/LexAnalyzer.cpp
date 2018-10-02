@@ -35,6 +35,7 @@ compilerCore::lexAnalyzer::lexAnalyzer(errorModule^ errorsModule)
 	m_Keywords.insert(std::make_pair("return", ""));
 	m_Keywords.insert(std::make_pair("true", ""));
 	m_Keywords.insert(std::make_pair("false", ""));
+	m_tokenIndex = 0;
 }
 
 compilerCore::lexAnalyzer::~lexAnalyzer()
@@ -508,11 +509,22 @@ void compilerCore::lexAnalyzer::reset()
 	//m_errorModule->reset();
 	m_Tokens.clear();
 	//m_Tokens.resize(0);
+	m_tokenIndex = 0;
 }
 
 void compilerCore::lexAnalyzer::getTokens(vector<token*>* tokensVec) const
 {
 	*tokensVec = m_Tokens;
+}
+
+const compilerCore::token* const compilerCore::lexAnalyzer::getNextToken()
+{
+	return m_Tokens[m_tokenIndex++];
+}
+
+const compilerCore::token* const compilerCore::lexAnalyzer::peekToken()
+{
+	return m_Tokens[m_tokenIndex + 1];
 }
 
 bool isLogical(const char currChar)

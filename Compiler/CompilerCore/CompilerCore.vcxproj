@@ -150,6 +150,12 @@
     <ClInclude Include="Stdafx.h" />
     <ClInclude Include="SymTable.h" />
     <ClInclude Include="SynAnalyzer.h" />
+    <ClInclude Include="SynState.h" />
+    <ClInclude Include="SynState_FunctionBlock.h" />
+    <ClInclude Include="SynState_Param.h" />
+    <ClInclude Include="SynState_Function.h" />
+    <ClInclude Include="SynState_Program.h" />
+    <ClInclude Include="SynState_Var.h" />
     <ClInclude Include="Token.h" />
   </ItemGroup>
   <ItemGroup>
@@ -167,6 +173,12 @@
     </ClCompile>
     <ClCompile Include="SymTable.cpp" />
     <ClCompile Include="SynAnalyzer.cpp" />
+    <ClCompile Include="SynState.cpp" />
+    <ClCompile Include="SynState_FunctionBlock.cpp" />
+    <ClCompile Include="SynState_Param.cpp" />
+    <ClCompile Include="SynState_Function.cpp" />
+    <ClCompile Include="SynState_Program.cpp" />
+    <ClCompile Include="SynState_Var.cpp" />
     <ClCompile Include="Token.cpp" />
   </ItemGroup>
   <ItemGroup>

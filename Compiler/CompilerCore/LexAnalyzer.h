@@ -49,6 +49,7 @@ namespace compilerCore
 		gcroot<errorModule^> m_errorModule;
 		map<string, string> m_Keywords;
 		vector<token*> m_Tokens;
+		int m_tokenIndex;
 
 	public:
 		lexAnalyzer(errorModule^ errorModule);
@@ -56,7 +57,7 @@ namespace compilerCore
 		bool parseSourceCode(const char* source);
 		void reset();
 		void getTokens(vector<token*>* tokenVec) const;
-		const token* getNextToken() const;
-		const token* peekToken() const;
+		const token* const getNextToken();
+		const token* const peekToken();
 	};
 }
