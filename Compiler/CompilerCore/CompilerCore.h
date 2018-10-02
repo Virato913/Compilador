@@ -10,6 +10,7 @@ using namespace System;
 
 #include "LexAnalyzer.h"
 #include "ErrorModule.h"
+#include "SynAnalyzer.h"
 
 using namespace System;
 
@@ -20,6 +21,7 @@ namespace compilerCore {
 		// TODO: Add your methods for this class here.
 	private:
 		lexAnalyzer* m_lexAnalyzer;     // LEX ANALYZER INSTANCE
+		synAnalyzer* m_synAnalyzer;		// SYN ANALYZER INSTANCE
 		errorModule^ m_errorModule;		// ERRORS MODULE
 		void lexAnalysis(String^);
 		cli::array<String^>^ getCompilationDetails();

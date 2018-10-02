@@ -51,10 +51,12 @@ namespace compilerCore
 		vector<token*> m_Tokens;
 
 	public:
-		lexAnalyzer(errorModule^);
+		lexAnalyzer(errorModule^ errorModule);
 		~lexAnalyzer();
-		bool parseSourceCode(const char*);
+		bool parseSourceCode(const char* source);
 		void reset();
-		void getTokens(vector<token*>*) const;
+		void getTokens(vector<token*>* tokenVec) const;
+		const token* getNextToken() const;
+		const token* peekToken() const;
 	};
 }

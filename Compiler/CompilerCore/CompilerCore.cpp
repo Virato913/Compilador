@@ -8,6 +8,7 @@ compilerCore::Manager::Manager()
 {
 	m_errorModule = gcnew errorModule();
 	m_lexAnalyzer = new lexAnalyzer(m_errorModule);
+	m_synAnalyzer = new synAnalyzer(m_lexAnalyzer, m_errorModule);
 }
 
 compilerCore::Manager::~Manager()
@@ -17,6 +18,13 @@ compilerCore::Manager::~Manager()
 	{
 		delete m_lexAnalyzer;
 		m_lexAnalyzer = nullptr;
+	}
+
+	// Free memory of SYN analyzer
+	if (m_synAnalyzer != nullptr)
+	{
+		delete m_synAnalyzer;
+		m_synAnalyzer = nullptr;
 	}
 
 	// Memory of ERRORS MODULE is automatically collected (allocated with gcnew)
