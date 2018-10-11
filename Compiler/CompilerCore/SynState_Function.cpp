@@ -30,7 +30,7 @@ bool compilerCore::synState_Function::checkSyntax()
 	{
 		synState_Param* p = new synState_Param(m_lexAnalyzer, m_errorModule, m_symTable);
 		if (!p->checkSyntax())
-			return false;
+			return false; //Max errors detected
 	}
 	t = m_lexAnalyzer->getNextToken();
 	if (m_lexAnalyzer->peekToken()->getType() != TOKEN_TYPE::AGROUP_OP)
@@ -58,6 +58,6 @@ bool compilerCore::synState_Function::checkSyntax()
 	}
 	synState_FunctionBlock* fb = new synState_FunctionBlock(m_lexAnalyzer, m_errorModule, m_symTable);
 	if (!fb->checkSyntax())
-		return false;
+		return false; //Max errors detected
 	return true;
 }
