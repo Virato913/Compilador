@@ -11,7 +11,7 @@ namespace compilerCore
 	class synState_Program : public synState
 	{
 	public:
-		synState_Program(lexAnalyzer* lexAnalizer, errorModule^ errorModule);
+		synState_Program(lexAnalyzer* lexAnalyzer, errorModule^ errorModule, symTable* symTable);
 		~synState_Program();
 		bool checkSyntax();
 	};

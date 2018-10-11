@@ -8,7 +8,7 @@ namespace compilerCore
 	class synState_FunctionBlock : public synState
 	{
 	public:
-		synState_FunctionBlock(lexAnalyzer* lexAnalizer, errorModule^ errorModule);
+		synState_FunctionBlock(lexAnalyzer* lexAnalyzer, errorModule^ errorModule, symTable* symTable);
 		~synState_FunctionBlock();
 		bool checkSyntax();
 	};
