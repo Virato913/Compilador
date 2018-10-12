@@ -15,6 +15,8 @@ namespace compilerCore
 		PARAM
 	};
 
+	struct nodeData;
+
 	class localNode
 	{
 	private:
@@ -27,6 +29,17 @@ namespace compilerCore
 
 	public:
 		localNode();
+		localNode(nodeData data);
 		~localNode();
+	};
+
+	struct nodeData
+	{
+		string type;
+		SCOPE scope;
+		int dimen;
+		void* value;
+		localNode* localNode;
+		string funcName;
 	};
 }

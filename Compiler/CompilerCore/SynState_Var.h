@@ -10,6 +10,6 @@ namespace compilerCore
 	public:
 		synState_Var(lexAnalyzer* lexAnalyzer, errorModule^ errorModule, symTable* symTable);
 		~synState_Var();
-		bool checkSyntax();
+		bool checkSyntax(SCOPE scope, string funcName = "");
 	};
 }

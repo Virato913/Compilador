@@ -524,7 +524,7 @@ const compilerCore::token* const compilerCore::lexAnalyzer::getNextToken()
 
 const compilerCore::token* const compilerCore::lexAnalyzer::peekToken()
 {
-	return m_Tokens[m_tokenIndex + 1];
+	return m_Tokens[m_tokenIndex];
 }
 
 bool isLogical(const char currChar)

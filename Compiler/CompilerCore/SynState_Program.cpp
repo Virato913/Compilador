@@ -20,7 +20,7 @@ bool compilerCore::synState_Program::checkSyntax()
 	while (t->getLex().compare("var") == 0)
 	{
 		synState_Var* v = new synState_Var(m_lexAnalyzer, m_errorModule, m_symTable);
-		if (!v->checkSyntax())
+		if (!v->checkSyntax(SCOPE::GLOBAL_VAR))
 			return false; // Max errors reached
 		t = m_lexAnalyzer->getNextToken();
 	}
@@ -38,8 +38,15 @@ bool compilerCore::synState_Program::checkSyntax()
 		{
 			t = m_lexAnalyzer->getNextToken();
 			t = m_lexAnalyzer->getNextToken();
-			synState_FunctionBlock* fb = new synState_FunctionBlock(m_lexAnalyzer, m_errorModule, m_symTable);
-			fb->checkSyntax();
+			if (!t->getLex().compare("{"))
+			{
+				synState_FunctionBlock* fb = new synState_FunctionBlock(m_lexAnalyzer, m_errorModule, m_symTable);
+				fb->checkSyntax("main");
+			}
+			else
+			{
+				//Error - { expected
+			}
 		}
 		else
 		{

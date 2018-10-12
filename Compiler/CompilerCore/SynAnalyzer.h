@@ -3,6 +3,7 @@
 #include "ErrorModule.h"
 #include "LexAnalyzer.h"
 #include "SymTable.h"
+#include "SynState_Program.h"
 
 using namespace System;
 
@@ -13,7 +14,7 @@ namespace compilerCore
 	private:
 		lexAnalyzer* m_lexAnalyzer;
 		gcroot<errorModule^> m_errorModule;
-		symTable* symTable;
+		symTable* m_symTable;
 	public:
 		synAnalyzer(lexAnalyzer* lexAnalyzer, errorModule^ errorModule);
 		~synAnalyzer();

@@ -9,6 +9,15 @@ using namespace System;
 
 namespace compilerCore
 {
+	//#define ERROR_ 
+	//#define ERROR_ 
+	//#define ERROR_ 
+	//#define ERROR_ 
+	//#define ERROR_ 
+	//#define ERROR_ 
+	//#define ERROR_ 
+	//#define ERROR_ 
+
 	class synState
 	{
 	protected:

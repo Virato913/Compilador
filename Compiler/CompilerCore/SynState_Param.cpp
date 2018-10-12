@@ -14,21 +14,49 @@ compilerCore::synState_Param::~synState_Param()
 
 }
 
-bool compilerCore::synState_Param::checkSyntax()
+bool compilerCore::synState_Param::checkSyntax(string funcName)
 {
 	const token* t = nullptr;
 	do
 	{
-		t = m_lexAnalyzer->getNextToken();
-		if (t->getType() != TOKEN_TYPE::ID)
+	vector<string> tempID;
+	nodeData data;
+		do
 		{
-			//Error - No ID found
+			t = m_lexAnalyzer->getNextToken();
+			if (t->getType() != TOKEN_TYPE::ID)
+			{
+				//Error - No ID found
+			}
+			else
+			{
+				//Keep track of current ID
+				tempID.push_back(t->getLex());
+			}
+			t = m_lexAnalyzer->getNextToken();
+		} while (!t->getLex().compare(","));
+		if (t->getLex().compare(":"))
+		{
+			//Error - Expected :
+		}
+		t = m_lexAnalyzer->getNextToken();
+		if (!t->getLex().compare("int") || !t->getLex().compare("float") || !t->getLex().compare("string") || !t->getLex().compare("bool"))
+		{
+			data.dimen = 0;
+			data.funcName = funcName;
+			data.localNode = nullptr;
+			data.scope = SCOPE::PARAM;
+			data.type = t->getLex();
+			//Cycle for adding found tokens to the symTable
+			for (int i = 0; i < tempID.size(); i++)
+			{
+				m_symTable->addSymbol(tempID[i], data);
+			}
 		}
 		else
 		{
-			//Keep track of current ID
+			//Error - No type declared or undefined type
 		}
-		t = m_lexAnalyzer->getNextToken();
-	} while (!t->getLex().compare(","));
+	} while (m_lexAnalyzer->peekToken()->getLex().compare(")"));
 	return true;
 }

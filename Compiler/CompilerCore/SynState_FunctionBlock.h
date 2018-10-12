@@ -1,5 +1,6 @@
 #pragma once
 #include "SynState.h"
+#include "SynState_Var.h"
 
 using namespace System;
 
@@ -10,6 +11,6 @@ namespace compilerCore
 	public:
 		synState_FunctionBlock(lexAnalyzer* lexAnalyzer, errorModule^ errorModule, symTable* symTable);
 		~synState_FunctionBlock();
-		bool checkSyntax();
+		bool checkSyntax(string funcName);
 	};
 }

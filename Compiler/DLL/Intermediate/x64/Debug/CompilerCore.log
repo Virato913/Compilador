@@ -1,8 +1,8 @@
 ﻿  Stdafx.cpp
   AssemblyInfo.cpp
   CompilerCore.cpp
-CompilerCore.cpp(75): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-CompilerCore.cpp(92): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+CompilerCore.cpp(85): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+CompilerCore.cpp(102): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
   ErrorModule.cpp
   GlobalNode.cpp
   LexAnalyzer.cpp

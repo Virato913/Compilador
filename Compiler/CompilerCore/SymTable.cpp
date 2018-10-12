@@ -9,11 +9,13 @@ compilerCore::symTable::symTable()
 
 compilerCore::symTable::~symTable()
 {
-
+	reset();
 }
 
-bool	compilerCore::symTable::addSymbol() 
+bool	compilerCore::symTable::addSymbol(string name, compilerCore::nodeData symbol) 
 {
+	globalNode newSymbol(symbol);
+	m_symbols.insert(std::make_pair(name, newSymbol));
 	return 0;
 }
 
@@ -40,4 +42,9 @@ bool	compilerCore::symTable::updateSymbolType()
 int		compilerCore::symTable::getSymbolDimension() 
 {
 	return 0;
+}
+
+void compilerCore::symTable::reset()
+{
+	m_symbols.clear();
 }

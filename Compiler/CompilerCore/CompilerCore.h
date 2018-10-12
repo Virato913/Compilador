@@ -24,6 +24,7 @@ namespace compilerCore {
 		synAnalyzer* m_synAnalyzer;		// SYN ANALYZER INSTANCE
 		errorModule^ m_errorModule;		// ERRORS MODULE
 		void lexAnalysis(String^);
+		void synAnalysis();
 		cli::array<String^>^ getCompilationDetails();
 		cli::array<cli::array<String^>^, 2>^ getCompDetails();
 

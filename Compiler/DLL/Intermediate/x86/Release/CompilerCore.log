@@ -1,14 +1,23 @@
 ﻿  Stdafx.cpp
   AssemblyInfo.cpp
   CompilerCore.cpp
-CompilerCore.cpp(92): warning C4018: '<': signed/unsigned mismatch
+CompilerCore.cpp(110): warning C4018: '<': signed/unsigned mismatch
   ErrorModule.cpp
   GlobalNode.cpp
   LexAnalyzer.cpp
   LocalNode.cpp
   SymTable.cpp
+  SynAnalyzer.cpp
+  SynState.cpp
+  SynState_FunctionBlock.cpp
+  SynState_Param.cpp
+SynState_Param.cpp(51): warning C4018: '<': signed/unsigned mismatch
+  SynState_Function.cpp
+  SynState_Program.cpp
+  SynState_Var.cpp
+SynState_Var.cpp(76): warning C4018: '<': signed/unsigned mismatch
   Token.cpp
   Generating Code...
   .NETFramework,Version=v4.5.2.AssemblyAttributes.cpp
-  CompilerCore.vcxproj -> C:\Users\Lab 1 Alumno 11\Documents\Alberto Villa\New folder\Compilador\Compiler\DLL\Binaries\x86\Release\compilerCore.dll
-  CompilerCore.vcxproj -> C:\Users\Lab 1 Alumno 11\Documents\Alberto Villa\New folder\Compilador\Compiler\DLL\Binaries\x86\Release\compilerCore.pdb (Full PDB)
+  CompilerCore.vcxproj -> C:\Users\Casa\Documents\Beto\Compiladores\Compilador\Compiler\DLL\Binaries\x86\Release\compilerCore.dll
+  CompilerCore.vcxproj -> C:\Users\Casa\Documents\Beto\Compiladores\Compilador\Compiler\DLL\Binaries\x86\Release\compilerCore.pdb (Full PDB)

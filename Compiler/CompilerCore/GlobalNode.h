@@ -16,6 +16,7 @@ namespace compilerCore
 
 	public:
 		globalNode();
+		globalNode(nodeData data);
 		~globalNode();
 	};
 }

@@ -33,6 +33,11 @@ namespace Compiler
             gridTokens.Columns.Add("Lex", "Lex");
             gridTokens.Columns.Add("Line", "Line");
             gridTokens.Columns.Add("Type", "Type");
+            gridSymbols.Columns.Add("Name", "Name");
+            gridSymbols.Columns.Add("Category", "Category");
+            gridSymbols.Columns.Add("Length", "Length");
+            gridSymbols.Columns.Add("Data Type", "Data Type");
+            gridSymbols.Columns.Add("Function", "Function");
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -69,10 +74,11 @@ namespace Compiler
 
         private void compileProgramToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (compilerDLLInstance != null)
+            if (compilerDLLInstance != null && txtSrc.Text.Length > 0)
             {
                 txtOutput.Clear();
                 gridTokens.Rows.Clear();
+                gridSymbols.Rows.Clear();
                 String[] compilationDetails = compilerDLLInstance.compileProgram(txtSrc.Text);
                 for (int i = 0; i < compilationDetails.Length; i++)
                 {
@@ -92,7 +98,19 @@ namespace Compiler
                 }
                 gridTokens.AutoResizeColumns();
                 gridTokens.AutoResizeRows();
+                gridSymbols.AutoResizeColumns();
+                gridSymbols.AutoResizeRows();
                 //txtOutput.Lines = compilationDetails;
+            }
+            else
+            {
+                txtOutput.Clear();
+                gridTokens.Rows.Clear();
+                gridSymbols.Rows.Clear();
+                if (compilerDLLInstance == null)
+                {
+                    MessageBox.Show("CompilerCoreDLL not found", "Error");
+                }
             }
         }
 

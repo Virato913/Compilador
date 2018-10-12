@@ -59,14 +59,6 @@ C:\Users\Lab 4 Alumno 12\Documents\Alberto Villa\Compilador\Compiler\Compiler\ob
 C:\Users\Alumno14\Documents\Alberto Villa\Compilador\Compiler\Compiler\bin\x64\Debug\Compiler.exe.config
 C:\Users\Alumno14\Documents\Alberto Villa\Compilador\Compiler\Compiler\obj\x64\Debug\Compiler.exe
 C:\Users\Alumno14\Documents\Alberto Villa\Compilador\Compiler\Compiler\obj\x64\Debug\Compiler.pdb
-C:\Users\Casa\Documents\Beto\Compiladores\Compilador\Compiler\Compiler\bin\x64\Debug\Compiler.exe.config
-C:\Users\Casa\Documents\Beto\Compiladores\Compilador\Compiler\Compiler\obj\x64\Debug\Compiler.exe
-C:\Users\Casa\Documents\Beto\Compiladores\Compilador\Compiler\Compiler\obj\x64\Debug\Compiler.pdb
-C:\Users\Casa\Documents\Beto\Compiladores\Compilador\Compiler\Compiler\bin\x64\Debug\Compiler.exe
-C:\Users\Casa\Documents\Beto\Compiladores\Compilador\Compiler\Compiler\bin\x64\Debug\Compiler.pdb
-C:\Users\Casa\Documents\Beto\Compiladores\Compilador\Compiler\Compiler\obj\x64\Debug\Compiler.Form1.resources
-C:\Users\Casa\Documents\Beto\Compiladores\Compilador\Compiler\Compiler\obj\x64\Debug\Compiler.Properties.Resources.resources
-C:\Users\Casa\Documents\Beto\Compiladores\Compilador\Compiler\Compiler\obj\x64\Debug\Compiler.csproj.GenerateResource.Cache
 C:\Users\Lab 4 Alumno 2\Documents\Alberto Villa\New folder\Compilador\Compiler\Compiler\bin\x64\Debug\Compiler.exe.config
 C:\Users\Lab 4 Alumno 2\Documents\Alberto Villa\New folder\Compilador\Compiler\Compiler\bin\x64\Debug\Compiler.exe
 C:\Users\Lab 4 Alumno 2\Documents\Alberto Villa\New folder\Compilador\Compiler\Compiler\bin\x64\Debug\Compiler.pdb
@@ -83,4 +75,11 @@ C:\Users\Lab 1 Alumno 11\Documents\Alberto Villa\New folder\Compilador\Compiler\
 C:\Users\Lab 1 Alumno 11\Documents\Alberto Villa\New folder\Compilador\Compiler\Compiler\obj\x64\Debug\Compiler.exe
 C:\Users\Lab 1 Alumno 11\Documents\Alberto Villa\New folder\Compilador\Compiler\Compiler\obj\x64\Debug\Compiler.pdb
 C:\Users\Lab 1 Alumno 11\Documents\Alberto Villa\New folder\Compilador\Compiler\Compiler\bin\x64\Debug\Compiler.pdb
-C:\Users\Casa\Documents\Beto\Compiladores\Compilador\Compiler\Compiler\obj\x64\Debug\Compiler.csprojResolveAssemblyReference.cache
+C:\Users\Casa\Documents\Beto\Compiladores\Compilador\Compiler\Compiler\bin\x64\Debug\Compiler.exe.config
+C:\Users\Casa\Documents\Beto\Compiladores\Compilador\Compiler\Compiler\bin\x64\Debug\Compiler.exe
+C:\Users\Casa\Documents\Beto\Compiladores\Compilador\Compiler\Compiler\bin\x64\Debug\Compiler.pdb
+C:\Users\Casa\Documents\Beto\Compiladores\Compilador\Compiler\Compiler\obj\x64\Debug\Compiler.Form1.resources
+C:\Users\Casa\Documents\Beto\Compiladores\Compilador\Compiler\Compiler\obj\x64\Debug\Compiler.Properties.Resources.resources
+C:\Users\Casa\Documents\Beto\Compiladores\Compilador\Compiler\Compiler\obj\x64\Debug\Compiler.csproj.GenerateResource.Cache
+C:\Users\Casa\Documents\Beto\Compiladores\Compilador\Compiler\Compiler\obj\x64\Debug\Compiler.exe
+C:\Users\Casa\Documents\Beto\Compiladores\Compilador\Compiler\Compiler\obj\x64\Debug\Compiler.pdb

@@ -1,12 +1,4 @@
 E:\IDV 6º\Segundo intento\Compilador\Compiler\Compiler\bin\x86\Release\Compiler.exe.config
-C:\Users\Casa\Documents\Beto\Compiladores\Compilador\Compiler\Compiler\bin\x86\Release\Compiler.exe.config
-C:\Users\Casa\Documents\Beto\Compiladores\Compilador\Compiler\Compiler\bin\x86\Release\Compiler.exe
-C:\Users\Casa\Documents\Beto\Compiladores\Compilador\Compiler\Compiler\bin\x86\Release\Compiler.pdb
-C:\Users\Casa\Documents\Beto\Compiladores\Compilador\Compiler\Compiler\obj\x86\Release\Compiler.Form1.resources
-C:\Users\Casa\Documents\Beto\Compiladores\Compilador\Compiler\Compiler\obj\x86\Release\Compiler.Properties.Resources.resources
-C:\Users\Casa\Documents\Beto\Compiladores\Compilador\Compiler\Compiler\obj\x86\Release\Compiler.csproj.GenerateResource.Cache
-C:\Users\Casa\Documents\Beto\Compiladores\Compilador\Compiler\Compiler\obj\x86\Release\Compiler.exe
-C:\Users\Casa\Documents\Beto\Compiladores\Compilador\Compiler\Compiler\obj\x86\Release\Compiler.pdb
 C:\Users\Lab 4 Alumno 2\Documents\Alberto Villa\New folder\Compilador\Compiler\Compiler\bin\x86\Release\Compiler.exe.config
 C:\Users\Lab 4 Alumno 2\Documents\Alberto Villa\New folder\Compilador\Compiler\Compiler\bin\x86\Release\Compiler.exe
 C:\Users\Lab 4 Alumno 2\Documents\Alberto Villa\New folder\Compilador\Compiler\Compiler\bin\x86\Release\Compiler.pdb
@@ -23,3 +15,11 @@ C:\Users\Lab 1 Alumno 11\Documents\Alberto Villa\New folder\Compilador\Compiler\
 C:\Users\Lab 1 Alumno 11\Documents\Alberto Villa\New folder\Compilador\Compiler\Compiler\obj\x86\Release\Compiler.csproj.GenerateResource.Cache
 C:\Users\Lab 1 Alumno 11\Documents\Alberto Villa\New folder\Compilador\Compiler\Compiler\obj\x86\Release\Compiler.exe
 C:\Users\Lab 1 Alumno 11\Documents\Alberto Villa\New folder\Compilador\Compiler\Compiler\obj\x86\Release\Compiler.pdb
+C:\Users\Casa\Documents\Beto\Compiladores\Compilador\Compiler\Compiler\bin\x86\Release\Compiler.exe.config
+C:\Users\Casa\Documents\Beto\Compiladores\Compilador\Compiler\Compiler\bin\x86\Release\Compiler.exe
+C:\Users\Casa\Documents\Beto\Compiladores\Compilador\Compiler\Compiler\bin\x86\Release\Compiler.pdb
+C:\Users\Casa\Documents\Beto\Compiladores\Compilador\Compiler\Compiler\obj\x86\Release\Compiler.Form1.resources
+C:\Users\Casa\Documents\Beto\Compiladores\Compilador\Compiler\Compiler\obj\x86\Release\Compiler.Properties.Resources.resources
+C:\Users\Casa\Documents\Beto\Compiladores\Compilador\Compiler\Compiler\obj\x86\Release\Compiler.csproj.GenerateResource.Cache
+C:\Users\Casa\Documents\Beto\Compiladores\Compilador\Compiler\Compiler\obj\x86\Release\Compiler.exe
+C:\Users\Casa\Documents\Beto\Compiladores\Compilador\Compiler\Compiler\obj\x86\Release\Compiler.pdb

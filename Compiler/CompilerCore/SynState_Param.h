@@ -10,6 +10,6 @@ namespace compilerCore
 	public:
 		synState_Param(lexAnalyzer* lexAnalyzer, errorModule^ errorModule, symTable* symTable);
 		~synState_Param();
-		bool checkSyntax();
+		bool checkSyntax(string funcName);
 	};
 }

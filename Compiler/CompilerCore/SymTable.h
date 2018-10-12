@@ -16,11 +16,12 @@ namespace compilerCore
 	public:
 		symTable();
 		~symTable();
-		bool addSymbol();
+		bool addSymbol(string name, nodeData symbol);
 		bool symbolExists();
 		string getSymbolName();
 		string getSymbolScope();
 		bool updateSymbolType();
 		int getSymbolDimension();
+		void reset();
 	};
 }

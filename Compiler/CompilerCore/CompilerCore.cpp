@@ -50,6 +50,8 @@ cli::array<String^>^ compilerCore::Manager::compileProgram(String^ sourceCode)
 
 	lexAnalysis(sourceCode);
 
+	synAnalysis();
+
 	compilationDetails = getCompilationDetails();
 
 	return compilationDetails;
@@ -65,6 +67,14 @@ void compilerCore::Manager::lexAnalysis(String^ sourceCode)
 			m_lexAnalyzer->reset();
 			m_errorModule->addErrorLex(0, "Max errors reached", "");
 		}
+	}
+}
+
+void compilerCore::Manager::synAnalysis()
+{
+	if (m_synAnalyzer != nullptr)
+	{
+		m_synAnalyzer->checkSyntax();
 	}
 }
 
