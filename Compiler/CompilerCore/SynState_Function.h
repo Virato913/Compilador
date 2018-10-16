@@ -10,6 +10,8 @@ namespace compilerCore
 {
 	class synState_Function : public synState
 	{
+#define SYNTAX_ERROR_PAREN "Expected ( or )"
+#define SYNTAX_ERROR_BRACKET "Expected {"
 	public:
 		synState_Function(lexAnalyzer* lexAnalyzer, errorModule^ errorModule, symTable* symTable);
 		~synState_Function();

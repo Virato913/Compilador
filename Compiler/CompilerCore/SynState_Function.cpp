@@ -22,12 +22,16 @@ bool compilerCore::synState_Function::checkSyntax()
 	if (t->getType() != TOKEN_TYPE::ID)
 	{
 		//Error - Expected a function ID but got something else
+		if (!m_errorModule->addErrorSyn(t->getLineNumber(), SYNTAX_ERROR_ID))
+			return false;
 	}
 	name = t->getLex();
 	t = m_lexAnalyzer->getNextToken();
 	if (t->getType() != TOKEN_TYPE::AGROUP_OP)
 	{
 		//Error - Expected ( or ) but got something else
+		if (!m_errorModule->addErrorSyn(t->getLineNumber(), SYNTAX_ERROR_PAREN))
+			return false;
 	}
 	if (m_lexAnalyzer->peekToken()->getType() != TOKEN_TYPE::AGROUP_OP)
 	{
@@ -39,11 +43,15 @@ bool compilerCore::synState_Function::checkSyntax()
 	if (m_lexAnalyzer->peekToken()->getType() != TOKEN_TYPE::AGROUP_OP)
 	{
 		//Error - Expected ( or ) but got something else
+		if (!m_errorModule->addErrorSyn(t->getLineNumber(), SYNTAX_ERROR_PAREN))
+			return false;
 	}
 	t = m_lexAnalyzer->getNextToken();
 	if (!t->getLex().compare(":"))
 	{
 		//Error - Expected : but got something else
+		if (!m_errorModule->addErrorSyn(t->getLineNumber(), SYNTAX_ERROR_SEPARATOR))
+			return false;
 	}
 	t = m_lexAnalyzer->getNextToken();
 	if (!t->getLex().compare("int") || !t->getLex().compare("float") || !t->getLex().compare("string") || !t->getLex().compare("bool"))
@@ -54,11 +62,15 @@ bool compilerCore::synState_Function::checkSyntax()
 	else
 	{
 		//Error - No type declared or undefined type
+		if (!m_errorModule->addErrorSyn(t->getLineNumber(), SYNTAX_ERROR_TYPE))
+			return false;
 	}
 	t = m_lexAnalyzer->getNextToken();
 	if (t->getType() != TOKEN_TYPE::AGROUP_OP)
 	{
 		//Error - Expected { or }
+		if (!m_errorModule->addErrorSyn(t->getLineNumber(), SYNTAX_ERROR_BRACKET))
+			return false;
 	}
 	data.dimen = 0;
 	data.funcName = "<GLOBAL SCOPE>";
