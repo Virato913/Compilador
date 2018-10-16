@@ -16,7 +16,8 @@ namespace compilerCore
 
 	public:
 		globalNode();
-		globalNode(nodeData data);
+		globalNode(string name, nodeData data);
 		~globalNode();
+		void addLocalNode(localNode* node);
 	};
 }

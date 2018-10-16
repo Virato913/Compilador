@@ -25,6 +25,8 @@ bool compilerCore::synState_Var::checkSyntax(compilerCore::SCOPE scope, string f
 		if (t->getType() != TOKEN_TYPE::ID)
 		{
 			//Error - No ID found
+			if (!m_errorModule->addErrorSyn(t->getLineNumber(), SYNTAX_ERROR_ID))
+				return false;
 		}
 		else
 		{
@@ -43,11 +45,15 @@ bool compilerCore::synState_Var::checkSyntax(compilerCore::SCOPE scope, string f
 			else
 			{
 				//Error - Invalid dimen
+				if (!m_errorModule->addErrorSyn(t->getLineNumber(), SYNTAX_ERROR_DIMEN))
+					return false;
 			}
 			t = m_lexAnalyzer->getNextToken();
-			if (!t->getLex().compare("]"))
+			if (t->getLex().compare("]"))
 			{
 				//Error - Open dimension operator
+				if (!m_errorModule->addErrorSyn(t->getLineNumber(), SYNTAX_ERROR_DIMEN_OP))
+					return false;
 			}
 			t = m_lexAnalyzer->getNextToken();
 		}
@@ -60,6 +66,8 @@ bool compilerCore::synState_Var::checkSyntax(compilerCore::SCOPE scope, string f
 	if (t->getLex().compare(":"))
 	{
 		//Error - Expected : but got something else
+		if (!m_errorModule->addErrorSyn(t->getLineNumber(), SYNTAX_ERROR_SEPARATOR))
+			return false;
 	}
 	t = m_lexAnalyzer->getNextToken();
 	if (!t->getLex().compare("int") || !t->getLex().compare("float") || !t->getLex().compare("string") || !t->getLex().compare("bool"))
@@ -82,11 +90,15 @@ bool compilerCore::synState_Var::checkSyntax(compilerCore::SCOPE scope, string f
 	else
 	{
 		//Error - No type declared or undefined type
+		if (!m_errorModule->addErrorSyn(t->getLineNumber(), SYNTAX_ERROR_TYPE))
+			return false;
 	}
 	t = m_lexAnalyzer->getNextToken();
 	if (t->getLex().compare(";"))
 	{
 		//Error - Expected ; but got something else
+		if (!m_errorModule->addErrorSyn(t->getLineNumber(), SYNTAX_ERROR_END))
+			return false;
 	}
 	return true;
 }

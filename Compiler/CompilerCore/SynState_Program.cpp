@@ -46,17 +46,22 @@ bool compilerCore::synState_Program::checkSyntax()
 			else
 			{
 				//Error - { expected
+				if (!m_errorModule->addErrorSyn(t->getLineNumber(), SYNTAX_ERROR_BRACKET))
+					return false;
 			}
 		}
 		else
 		{
 			t = m_lexAnalyzer->getNextToken();
 			// Error de declaración de main (?)
+			if (!m_errorModule->addErrorSyn(t->getLineNumber(), SYNTAX_ERROR_MAIN_DECLARATION))
+				return false;
 		}
 	}
 	else
 	{
 		// Error en el programa (?)
+		return m_errorModule->addErrorSyn(t->getLineNumber(), SYNTAX_ERROR_PROGRAM);
 	}
 	return true;
 }

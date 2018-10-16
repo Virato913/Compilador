@@ -83,3 +83,4 @@ C:\Users\Casa\Documents\Beto\Compiladores\Compilador\Compiler\Compiler\obj\x64\D
 C:\Users\Casa\Documents\Beto\Compiladores\Compilador\Compiler\Compiler\obj\x64\Debug\Compiler.csproj.GenerateResource.Cache
 C:\Users\Casa\Documents\Beto\Compiladores\Compilador\Compiler\Compiler\obj\x64\Debug\Compiler.exe
 C:\Users\Casa\Documents\Beto\Compiladores\Compilador\Compiler\Compiler\obj\x64\Debug\Compiler.pdb
+C:\Users\Casa\Documents\Beto\Compiladores\Compilador\Compiler\Compiler\obj\x64\Debug\Compiler.csprojResolveAssemblyReference.cache

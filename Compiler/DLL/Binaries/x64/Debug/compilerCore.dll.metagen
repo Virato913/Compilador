@@ -16,6 +16,7 @@ Class compilerCore.errorModule: AutoLayout, AnsiClass, Class, Public, BeforeFiel
   Methods:
     reset(): PrivateScope, Public, HideBySig
     addErrorLex(Int32, SByte*, SByte*): PrivateScope, Public, HideBySig
+    addErrorSyn(Int32, SByte*): PrivateScope, Public, HideBySig
     get_Errors(): PrivateScope, Public, HideBySig, SpecialName
 Class compilerCore.Manager: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName

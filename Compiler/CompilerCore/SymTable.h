@@ -17,7 +17,7 @@ namespace compilerCore
 		symTable();
 		~symTable();
 		bool addSymbol(string name, nodeData symbol);
-		bool symbolExists();
+		bool symbolExists(string name, map<string, globalNode>::iterator* it);
 		string getSymbolName();
 		string getSymbolScope();
 		bool updateSymbolType();

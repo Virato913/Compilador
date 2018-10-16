@@ -31,6 +31,7 @@ namespace compilerCore
 		localNode();
 		localNode(nodeData data);
 		~localNode();
+		void addNode(localNode* node);
 	};
 
 	struct nodeData

@@ -82,7 +82,7 @@ namespace Compiler
                 String[] compilationDetails = compilerDLLInstance.compileProgram(txtSrc.Text);
                 for (int i = 0; i < compilationDetails.Length; i++)
                 {
-                    if (compilationDetails[i].Contains("<LEXIC_ANALYZER>"))
+                    if (compilationDetails[i].Contains("<LEXIC_ANALYZER>") || compilationDetails[i].Contains("<SYNTAX_ANALYZER>"))
                     {
                         txtOutput.Text += compilationDetails[i];
                         txtOutput.Text += "\r\n";

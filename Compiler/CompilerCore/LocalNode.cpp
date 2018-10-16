@@ -23,3 +23,15 @@ compilerCore::localNode::~localNode()
 	if (m_localNode)
 		delete m_localNode;
 }
+
+void compilerCore::localNode::addNode(compilerCore::localNode* node)
+{
+	if (m_localNode)
+	{
+		m_localNode->addNode(node);
+	}
+	else
+	{
+		m_localNode = node;
+	}
+}

@@ -27,6 +27,8 @@ bool compilerCore::synState_Param::checkSyntax(string funcName)
 			if (t->getType() != TOKEN_TYPE::ID)
 			{
 				//Error - No ID found
+				if (!m_errorModule->addErrorSyn(t->getLineNumber(), SYNTAX_ERROR_ID))
+					return false;
 			}
 			else
 			{
@@ -38,6 +40,8 @@ bool compilerCore::synState_Param::checkSyntax(string funcName)
 		if (t->getLex().compare(":"))
 		{
 			//Error - Expected :
+			if (!m_errorModule->addErrorSyn(t->getLineNumber(), SYNTAX_ERROR_SEPARATOR))
+				return false;
 		}
 		t = m_lexAnalyzer->getNextToken();
 		if (!t->getLex().compare("int") || !t->getLex().compare("float") || !t->getLex().compare("string") || !t->getLex().compare("bool"))
@@ -56,6 +60,8 @@ bool compilerCore::synState_Param::checkSyntax(string funcName)
 		else
 		{
 			//Error - No type declared or undefined type
+			if (!m_errorModule->addErrorSyn(t->getLineNumber(), SYNTAX_ERROR_TYPE))
+				return false;
 		}
 	} while (m_lexAnalyzer->peekToken()->getLex().compare(")"));
 	return true;

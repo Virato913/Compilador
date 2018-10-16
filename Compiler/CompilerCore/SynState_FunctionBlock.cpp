@@ -18,16 +18,22 @@ compilerCore::synState_FunctionBlock::~synState_FunctionBlock()
 bool compilerCore::synState_FunctionBlock::checkSyntax(string funcName)
 {
 	const token* t = m_lexAnalyzer->getNextToken();
+	bool returnFound = false;
 	while (t->getLex().compare("}"))
 	{
-		t = m_lexAnalyzer->getNextToken();
 		while (t->getLex().compare("var") == 0)
 		{
 			synState_Var* v = new synState_Var(m_lexAnalyzer, m_errorModule, m_symTable);
 			if (!v->checkSyntax(SCOPE::LOCAL_VAR, funcName))
 				return false; // Max errors reached
-			t = m_lexAnalyzer->getNextToken();
+			t = m_lexAnalyzer->peekToken();
 		}
+		t = m_lexAnalyzer->getNextToken();
+		if (!t->getLex().compare("return"))
+			returnFound = true;
 	}
+	if (!returnFound)
+		if(!m_errorModule->addErrorSyn(t->getLineNumber(), SYNTAX_ERROR_RETURN))
+			return false;
 	return true;
 }
