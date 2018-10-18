@@ -63,6 +63,9 @@
     <ClInclude Include="SynState_FunctionBlock.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="SynState_Statements.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CompilerCore.cpp">
@@ -111,6 +114,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SynState_FunctionBlock.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SynState_Statements.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
