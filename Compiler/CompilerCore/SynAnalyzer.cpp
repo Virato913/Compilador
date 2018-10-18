@@ -20,3 +20,8 @@ bool compilerCore::synAnalyzer::checkSyntax()
 	synState_Program* p = new synState_Program(m_lexAnalyzer, m_errorModule, m_symTable);
 	return p->checkSyntax();
 }
+
+void compilerCore::synAnalyzer::getSymbols(map<string, compilerCore::globalNode>* symbols)
+{
+	m_symTable->getSymbols(symbols);
+}

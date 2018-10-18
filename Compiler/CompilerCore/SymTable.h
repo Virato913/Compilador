@@ -25,5 +25,6 @@ namespace compilerCore
 		bool updateSymbolType();
 		int getSymbolDimension(string name, SCOPE scope, string funcName);
 		void reset();
+		void getSymbols(map<string, globalNode>* symbols);
 	};
 }

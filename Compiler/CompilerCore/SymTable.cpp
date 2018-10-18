@@ -58,3 +58,8 @@ void compilerCore::symTable::reset()
 {
 	m_symbols.clear();
 }
+
+void compilerCore::symTable::getSymbols(map<string, globalNode>* symbols)
+{
+	*symbols = m_symbols;
+}

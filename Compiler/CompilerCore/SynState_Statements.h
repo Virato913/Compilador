@@ -3,6 +3,15 @@
 
 namespace compilerCore
 {
+#define SYNTAX_ERROR_PAREN "Expected ("
+#define SYNTAX_ERROR_BRACKET "Expected {"
+#define SYNTAX_ERROR_SEMICOLON "Expected ;"
+#define SYNTAX_ERROR_INC_DEC "Expected increment or decrement"
+#define SYNTAX_ERROR_INT "Integer expected"
+#define SYNTAX_ERROR_POS_INT "Positive integer expected"
+#define SYNTAX_ERROR_CPAREN "Expected )"
+#define SYNTAX_ERROR_ASSIGN "Expected ="
+#define SYNTAX_ERROR_ID "Expected ID"
 	///////////////////////////////////
 	///           IF                ///
 	///////////////////////////////////

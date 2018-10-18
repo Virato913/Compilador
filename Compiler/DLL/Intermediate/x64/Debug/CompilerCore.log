@@ -1,6 +1,12 @@
 ﻿  Stdafx.cpp
   AssemblyInfo.cpp
   CompilerCore.cpp
+c:\users\lab 1 alumno 11\documents\alberto villa\compilador\compiler\compilercore\SynState_Statements.h(14): warning C4005: 'SYNTAX_ERROR_ID': macro redefinition
+  c:\users\lab 1 alumno 11\documents\alberto villa\compilador\compiler\compilercore\SynState_Var.h(10): note: see previous definition of 'SYNTAX_ERROR_ID'
+c:\users\lab 1 alumno 11\documents\alberto villa\compilador\compiler\compilercore\SynState_Param.h(10): warning C4005: 'SYNTAX_ERROR_ID': macro redefinition
+  c:\users\lab 1 alumno 11\documents\alberto villa\compilador\compiler\compilercore\SynState_Statements.h(14): note: see previous definition of 'SYNTAX_ERROR_ID'
+c:\users\lab 1 alumno 11\documents\alberto villa\compilador\compiler\compilercore\SynState_Function.h(13): warning C4005: 'SYNTAX_ERROR_PAREN': macro redefinition
+  c:\users\lab 1 alumno 11\documents\alberto villa\compilador\compiler\compilercore\SynState_Statements.h(6): note: see previous definition of 'SYNTAX_ERROR_PAREN'
 CompilerCore.cpp(85): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
 CompilerCore.cpp(102): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
   ErrorModule.cpp
@@ -9,11 +15,29 @@ CompilerCore.cpp(102): warning C4267: 'argument': conversion from 'size_t' to 'i
   LocalNode.cpp
   SymTable.cpp
   SynAnalyzer.cpp
+c:\users\lab 1 alumno 11\documents\alberto villa\compilador\compiler\compilercore\SynState_Statements.h(14): warning C4005: 'SYNTAX_ERROR_ID': macro redefinition
+  c:\users\lab 1 alumno 11\documents\alberto villa\compilador\compiler\compilercore\SynState_Var.h(10): note: see previous definition of 'SYNTAX_ERROR_ID'
+c:\users\lab 1 alumno 11\documents\alberto villa\compilador\compiler\compilercore\SynState_Param.h(10): warning C4005: 'SYNTAX_ERROR_ID': macro redefinition
+  c:\users\lab 1 alumno 11\documents\alberto villa\compilador\compiler\compilercore\SynState_Statements.h(14): note: see previous definition of 'SYNTAX_ERROR_ID'
+c:\users\lab 1 alumno 11\documents\alberto villa\compilador\compiler\compilercore\SynState_Function.h(13): warning C4005: 'SYNTAX_ERROR_PAREN': macro redefinition
+  c:\users\lab 1 alumno 11\documents\alberto villa\compilador\compiler\compilercore\SynState_Statements.h(6): note: see previous definition of 'SYNTAX_ERROR_PAREN'
   SynState.cpp
   SynState_FunctionBlock.cpp
+c:\users\lab 1 alumno 11\documents\alberto villa\compilador\compiler\compilercore\SynState_Var.h(10): warning C4005: 'SYNTAX_ERROR_ID': macro redefinition
+  c:\users\lab 1 alumno 11\documents\alberto villa\compilador\compiler\compilercore\SynState_Statements.h(14): note: see previous definition of 'SYNTAX_ERROR_ID'
   SynState_Param.cpp
   SynState_Function.cpp
+c:\users\lab 1 alumno 11\documents\alberto villa\compilador\compiler\compilercore\SynState_Var.h(10): warning C4005: 'SYNTAX_ERROR_ID': macro redefinition
+  c:\users\lab 1 alumno 11\documents\alberto villa\compilador\compiler\compilercore\SynState_Statements.h(14): note: see previous definition of 'SYNTAX_ERROR_ID'
+c:\users\lab 1 alumno 11\documents\alberto villa\compilador\compiler\compilercore\SynState_Function.h(13): warning C4005: 'SYNTAX_ERROR_PAREN': macro redefinition
+  c:\users\lab 1 alumno 11\documents\alberto villa\compilador\compiler\compilercore\SynState_Statements.h(6): note: see previous definition of 'SYNTAX_ERROR_PAREN'
   SynState_Program.cpp
+c:\users\lab 1 alumno 11\documents\alberto villa\compilador\compiler\compilercore\SynState_Statements.h(14): warning C4005: 'SYNTAX_ERROR_ID': macro redefinition
+  c:\users\lab 1 alumno 11\documents\alberto villa\compilador\compiler\compilercore\SynState_Var.h(10): note: see previous definition of 'SYNTAX_ERROR_ID'
+c:\users\lab 1 alumno 11\documents\alberto villa\compilador\compiler\compilercore\SynState_Param.h(10): warning C4005: 'SYNTAX_ERROR_ID': macro redefinition
+  c:\users\lab 1 alumno 11\documents\alberto villa\compilador\compiler\compilercore\SynState_Statements.h(14): note: see previous definition of 'SYNTAX_ERROR_ID'
+c:\users\lab 1 alumno 11\documents\alberto villa\compilador\compiler\compilercore\SynState_Function.h(13): warning C4005: 'SYNTAX_ERROR_PAREN': macro redefinition
+  c:\users\lab 1 alumno 11\documents\alberto villa\compilador\compiler\compilercore\SynState_Statements.h(6): note: see previous definition of 'SYNTAX_ERROR_PAREN'
   SynState_StatementBlock.cpp
   SynState_Statements.cpp
   SynState_Var.cpp

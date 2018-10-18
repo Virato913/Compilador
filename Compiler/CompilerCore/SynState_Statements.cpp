@@ -19,6 +19,8 @@ bool compilerCore::synState_If::checkSyntax()
 	if (t->getLex().compare("("))
 	{
 		//Error - Expected (
+		if (!m_errorModule->addErrorSyn(t->getLineNumber(), SYNTAX_ERROR_PAREN))
+			return false;
 	}
 	else
 	{
@@ -32,6 +34,8 @@ bool compilerCore::synState_If::checkSyntax()
 	if (t->getLex().compare("{"))
 	{
 		//Error - Expected {
+		if (!m_errorModule->addErrorSyn(t->getLineNumber(), SYNTAX_ERROR_BRACKET))
+			return false;
 	}
 	else
 	{
@@ -46,6 +50,8 @@ bool compilerCore::synState_If::checkSyntax()
 		if (t->getLex().compare("{"))
 		{
 			//Error - Expected {
+			if (!m_errorModule->addErrorSyn(t->getLineNumber(), SYNTAX_ERROR_BRACKET))
+				return false;
 		}
 		synState_StatementBlock* sb = new synState_StatementBlock(m_lexAnalyzer, m_errorModule, m_symTable);
 		if (!sb->checkSyntax())
@@ -72,6 +78,8 @@ bool compilerCore::synState_While::checkSyntax()
 	if (t->getLex().compare("("))
 	{
 		//Error - Expected (
+		if (!m_errorModule->addErrorSyn(t->getLineNumber(), SYNTAX_ERROR_PAREN))
+			return false;
 	}
 	else
 	{
@@ -85,6 +93,8 @@ bool compilerCore::synState_While::checkSyntax()
 	if (t->getLex().compare("{"))
 	{
 		//Error - Expected {
+		if (!m_errorModule->addErrorSyn(t->getLineNumber(), SYNTAX_ERROR_BRACKET))
+			return false;
 	}
 	else
 	{
@@ -113,6 +123,8 @@ bool compilerCore::synState_For::checkSyntax()
 	if (t->getLex().compare("("))
 	{
 		//Error - Expected (
+		if (!m_errorModule->addErrorSyn(t->getLineNumber(), SYNTAX_ERROR_PAREN))
+			return false;
 	}
 	else
 	{
@@ -124,6 +136,8 @@ bool compilerCore::synState_For::checkSyntax()
 	if (t->getLex().compare(";"))
 	{
 		//Error - Expected ;
+		if (!m_errorModule->addErrorSyn(t->getLineNumber(), SYNTAX_ERROR_SEMICOLON))
+			return false;
 	}
 	t = m_lexAnalyzer->getNextToken();
 	//Check logical expression
@@ -134,33 +148,45 @@ bool compilerCore::synState_For::checkSyntax()
 	if (t->getLex().compare(";"))
 	{
 		//Error - Expected ;
+		if (!m_errorModule->addErrorSyn(t->getLineNumber(), SYNTAX_ERROR_SEMICOLON))
+			return false;
 	}
 	t = m_lexAnalyzer->getNextToken();
 	if (t->getLex().compare("inc") || t->getLex().compare("dec"))
 	{
 		//Error - Increment or decrement expected
+		if (!m_errorModule->addErrorSyn(t->getLineNumber(), SYNTAX_ERROR_INC_DEC))
+			return false;
 	}
 	t = m_lexAnalyzer->getNextToken();
 	if (t->getType() != TOKEN_TYPE::INT)
 	{
 		//Error - Invalid number
+		if (!m_errorModule->addErrorSyn(t->getLineNumber(), SYNTAX_ERROR_INT))
+			return false;
 	}
 	else
 	{
 		if (atoi(t->getLex().c_str()) < 0)
 		{
 			//Error - Positive integer expected
+			if (!m_errorModule->addErrorSyn(t->getLineNumber(), SYNTAX_ERROR_POS_INT))
+				return false;
 		}
 	}
 	t = m_lexAnalyzer->getNextToken();
 	if (t->getLex().compare(")"))
 	{
 		//Error - Expected )
+		if (!m_errorModule->addErrorSyn(t->getLineNumber(), SYNTAX_ERROR_CPAREN))
+			return false;
 	}
 	t = m_lexAnalyzer->getNextToken();
 	if (t->getLex().compare("{"))
 	{
 		//Error - Expected {
+		if (!m_errorModule->addErrorSyn(t->getLineNumber(), SYNTAX_ERROR_PAREN))
+			return false;
 	}
 	else
 	{
@@ -207,6 +233,8 @@ bool compilerCore::synState_Assign::checkSyntax()
 	if (t->getType() != TOKEN_TYPE::ID)
 	{
 		//Error - Expected ID
+		if (!m_errorModule->addErrorSyn(t->getLineNumber(), SYNTAX_ERROR_ID))
+			return false;
 	}
 	t = m_lexAnalyzer->getNextToken();
 	if (!t->getLex().compare("["))
@@ -221,6 +249,8 @@ bool compilerCore::synState_Assign::checkSyntax()
 	if (t->getLex().compare("="))
 	{
 		//Error - Expected assign token
+		if (!m_errorModule->addErrorSyn(t->getLineNumber(), SYNTAX_ERROR_ASSIGN))
+			return false;
 	}
 	//Evaluate logical expression for assignment
 	t = m_lexAnalyzer->getNextToken();
@@ -249,11 +279,15 @@ bool compilerCore::synState_Read::checkSyntax()
 	if (t->getLex().compare("("))
 	{
 		//Error - Expected (
+		if (!m_errorModule->addErrorSyn(t->getLineNumber(), SYNTAX_ERROR_PAREN))
+			return false;
 	}
 	t = m_lexAnalyzer->getNextToken();
 	if (t->getType() != TOKEN_TYPE::ID)
 	{
 		//Error - Expected ID
+		if (!m_errorModule->addErrorSyn(t->getLineNumber(), SYNTAX_ERROR_ID))
+			return false;
 	}
 	t = m_lexAnalyzer->getNextToken();
 	if (!t->getLex().compare("["))
@@ -268,11 +302,15 @@ bool compilerCore::synState_Read::checkSyntax()
 	if (t->getLex().compare(")"))
 	{
 		//Error - Expected )
+		if (!m_errorModule->addErrorSyn(t->getLineNumber(), SYNTAX_ERROR_CPAREN))
+			return false;
 	}
 	t = m_lexAnalyzer->getNextToken();
 	if (t->getLex().compare(";"))
 	{
 		//Error - Expected ;
+		if (!m_errorModule->addErrorSyn(t->getLineNumber(), SYNTAX_ERROR_SEMICOLON))
+			return false;
 	}
 	return true;
 }
@@ -295,6 +333,8 @@ bool compilerCore::synState_Print::checkSyntax()
 	if (t->getLex().compare("("))
 	{
 		//Error - Expected (
+		if (!m_errorModule->addErrorSyn(t->getLineNumber(), SYNTAX_ERROR_PAREN))
+			return false;
 	}
 	t = m_lexAnalyzer->getNextToken();
 	//Evaluate logical expression list
@@ -306,6 +346,8 @@ bool compilerCore::synState_Print::checkSyntax()
 	if (t->getLex().compare(";"))
 	{
 		//Error - Expected ;
+		if (!m_errorModule->addErrorSyn(t->getLineNumber(), SYNTAX_ERROR_SEMICOLON))
+			return false;
 	}
 	return true;
 }
@@ -325,6 +367,11 @@ compilerCore::synState_Return::~synState_Return()
 bool compilerCore::synState_Return::checkSyntax()
 {
 	const token* t = m_lexAnalyzer->getNextToken();
+	//Evaluate logical expresion
+	while (t->getLex().compare(";"))
+	{
+		t = m_lexAnalyzer->getNextToken();
+	}
 	return true;
 }
 
@@ -342,7 +389,12 @@ compilerCore::synState_FuncCall::~synState_FuncCall()
 
 bool compilerCore::synState_FuncCall::checkSyntax()
 {
-
+	const token* t = m_lexAnalyzer->getNextToken();
+	//Evaluate logical expresion list
+	while (t->getLex().compare(")"))
+	{
+		t = m_lexAnalyzer->getNextToken();
+	}
 	return true;
 }
 
@@ -418,17 +470,23 @@ bool compilerCore::synState_StatementBlock::checkSyntax()
 					else
 					{
 						//Assignment error
+						if (!m_errorModule->addErrorSyn(t->getLineNumber(), SYNTAX_ERROR_ASSIGN))
+							return false;
 					}
 				}
 				else if (!t->getLex().compare("="))
 				{
-					synState_Assign* s = new synState_Assign(m_lexAnalyzer, m_errorModule, m_symTable);
-					if (!s->checkSyntax())
-						return false;
+					//Evaluate logical expresion for assignment
+					while (t->getLex().compare(";"))
+					{
+						t = m_lexAnalyzer->getNextToken();
+					}
 				}
 				else
 				{
 					//Assignment error
+					if (!m_errorModule->addErrorSyn(t->getLineNumber(), SYNTAX_ERROR_ASSIGN))
+						return false;
 				}
 			}
 		}

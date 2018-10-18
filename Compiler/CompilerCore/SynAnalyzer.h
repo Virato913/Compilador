@@ -19,5 +19,6 @@ namespace compilerCore
 		synAnalyzer(lexAnalyzer* lexAnalyzer, errorModule^ errorModule);
 		~synAnalyzer();
 		bool checkSyntax();
+		void getSymbols(map<string, globalNode>* symbols);
 	};
 }
