@@ -40,14 +40,14 @@ bool compilerCore::synState_Function::checkSyntax()
 			return false; //Max errors detected
 	}
 	t = m_lexAnalyzer->getNextToken();
-	if (m_lexAnalyzer->peekToken()->getType() != TOKEN_TYPE::AGROUP_OP)
+	if (t->getType() != TOKEN_TYPE::AGROUP_OP)
 	{
 		//Error - Expected ( or ) but got something else
 		if (!m_errorModule->addErrorSyn(t->getLineNumber(), SYNTAX_ERROR_PAREN))
 			return false;
 	}
 	t = m_lexAnalyzer->getNextToken();
-	if (!t->getLex().compare(":"))
+	if (t->getLex().compare(":"))
 	{
 		//Error - Expected : but got something else
 		if (!m_errorModule->addErrorSyn(t->getLineNumber(), SYNTAX_ERROR_SEPARATOR))

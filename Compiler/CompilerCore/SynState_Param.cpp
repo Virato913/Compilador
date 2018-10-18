@@ -63,13 +63,13 @@ bool compilerCore::synState_Param::checkSyntax(string funcName)
 			if (!m_errorModule->addErrorSyn(t->getLineNumber(), SYNTAX_ERROR_TYPE))
 				return false;
 		}
-		if (!m_lexAnalyzer->peekToken()->getLex().compare(";"))
-			t = m_lexAnalyzer->getNextToken();
-		else
-		{
-			if (!m_errorModule->addErrorSyn(t->getLineNumber(), SYNTAX_ERROR_MULTIPLE_TYPES))
-				return false;
-		}
+		//if (!m_lexAnalyzer->peekToken()->getLex().compare(";"))
+		//	t = m_lexAnalyzer->getNextToken();
+		//else
+		//{
+		//	if (!m_errorModule->addErrorSyn(t->getLineNumber(), SYNTAX_ERROR_MULTIPLE_TYPES))
+		//		return false;
+		//}
 	} while (m_lexAnalyzer->peekToken()->getLex().compare(")"));
 	return true;
 }
