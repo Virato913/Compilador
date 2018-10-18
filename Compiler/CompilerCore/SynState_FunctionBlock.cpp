@@ -17,8 +17,8 @@ compilerCore::synState_FunctionBlock::~synState_FunctionBlock()
 
 bool compilerCore::synState_FunctionBlock::checkSyntax(string funcName)
 {
-	const token* t = m_lexAnalyzer->getNextToken();
 	bool returnFound = false;
+	const token* t = m_lexAnalyzer->getNextToken();
 	while (t->getLex().compare("var") == 0)
 	{
 		synState_Var* v = new synState_Var(m_lexAnalyzer, m_errorModule, m_symTable);
@@ -31,35 +31,85 @@ bool compilerCore::synState_FunctionBlock::checkSyntax(string funcName)
 		t = m_lexAnalyzer->getNextToken();
 		if (!t->getLex().compare("if"))
 		{
-			
+			synState_If* s = new synState_If(m_lexAnalyzer, m_errorModule, m_symTable);
+			if (!s->checkSyntax())
+				return false;
 		}
 		if (!t->getLex().compare("while"))
 		{
-
+			synState_While* s = new synState_While(m_lexAnalyzer, m_errorModule, m_symTable);
+			if (!s->checkSyntax())
+				return false;
 		}
 		if (!t->getLex().compare("for"))
 		{
-
+			synState_For* s = new synState_For(m_lexAnalyzer, m_errorModule, m_symTable);
+			if (!s->checkSyntax())
+				return false;
 		}
 		if (!t->getLex().compare("switch"))
 		{
-
+			synState_Switch* s = new synState_Switch(m_lexAnalyzer, m_errorModule, m_symTable);
+			if (!s->checkSyntax())
+				return false;
 		}
 		if (t->getType() == TOKEN_TYPE::ID)
 		{
-
+			t = m_lexAnalyzer->getNextToken();
+			if (!t->getLex().compare("("))
+			{
+				synState_FuncCall* s = new synState_FuncCall(m_lexAnalyzer, m_errorModule, m_symTable);
+				if (!s->checkSyntax())
+					return false;
+			}
+			else
+			{
+				if(!t->getLex().compare("["))
+				{
+					//Evaluate logical expression for the dimension
+					if (!t->getLex().compare("="))
+					{
+						synState_Assign* s = new synState_Assign(m_lexAnalyzer, m_errorModule, m_symTable);
+						if (!s->checkSyntax())
+							return false;
+					}
+					else
+					{
+						//Assignment error
+					}
+				}
+				else if (!t->getLex().compare("="))
+				{
+					synState_Assign* s = new synState_Assign(m_lexAnalyzer, m_errorModule, m_symTable);
+					if (!s->checkSyntax())
+						return false;
+				}
+				else
+				{
+					//Assignment error
+				}
+			}
 		}
 		if (!t->getLex().compare("read"))
 		{
-
+			synState_Read* s = new synState_Read(m_lexAnalyzer, m_errorModule, m_symTable);
+			if (!s->checkSyntax())
+				return false;
 		}
 		if (!t->getLex().compare("print"))
 		{
-
+			synState_Print* s = new synState_Print(m_lexAnalyzer, m_errorModule, m_symTable);
+			if (!s->checkSyntax())
+				return false;
 		}
 		if (!t->getLex().compare("return"))
 		{
+
+			synState_Return* s = new synState_Return(m_lexAnalyzer, m_errorModule, m_symTable);
+			if (!s->checkSyntax())
+				return false;
 			returnFound = true;
+			break;
 		}
 	}
 	if (!returnFound)
