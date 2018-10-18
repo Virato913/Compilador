@@ -39,7 +39,7 @@ string compilerCore::symTable::getSymbolName()
 	return 0;
 }
 
-string compilerCore::symTable::getSymbolScope() 
+string compilerCore::symTable::getSymbolScope(string name)
 {
 	return 0;
 }
@@ -49,7 +49,7 @@ bool compilerCore::symTable::updateSymbolType()
 	return 0;
 }
 
-int	compilerCore::symTable::getSymbolDimension() 
+int	compilerCore::symTable::getSymbolDimension(string name, SCOPE scope, string funcName)
 {
 	return 0;
 }

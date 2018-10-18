@@ -155,6 +155,7 @@
     <ClInclude Include="SynState_Param.h" />
     <ClInclude Include="SynState_Function.h" />
     <ClInclude Include="SynState_Program.h" />
+    <ClInclude Include="SynState_StatementBlock.h" />
     <ClInclude Include="SynState_Statements.h" />
     <ClInclude Include="SynState_Var.h" />
     <ClInclude Include="Token.h" />
@@ -179,6 +180,7 @@
     <ClCompile Include="SynState_Param.cpp" />
     <ClCompile Include="SynState_Function.cpp" />
     <ClCompile Include="SynState_Program.cpp" />
+    <ClCompile Include="SynState_StatementBlock.cpp" />
     <ClCompile Include="SynState_Statements.cpp" />
     <ClCompile Include="SynState_Var.cpp" />
     <ClCompile Include="Token.cpp" />

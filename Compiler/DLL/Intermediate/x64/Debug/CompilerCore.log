@@ -14,10 +14,12 @@ CompilerCore.cpp(102): warning C4267: 'argument': conversion from 'size_t' to 'i
   SynState_Param.cpp
   SynState_Function.cpp
   SynState_Program.cpp
+  SynState_StatementBlock.cpp
+  SynState_Statements.cpp
   SynState_Var.cpp
   Token.cpp
   Generating Code...
   .NETFramework,Version=v4.5.2.AssemblyAttributes.cpp
   AssemblyInfo.obj : /DEBUG:FASTLINK is not supported when managed code is present; restarting link with /DEBUG:FULL
-  CompilerCore.vcxproj -> C:\Users\Casa\Documents\Beto\Compiladores\Compilador\Compiler\DLL\Binaries\x64\Debug\compilerCore.dll
-  CompilerCore.vcxproj -> C:\Users\Casa\Documents\Beto\Compiladores\Compilador\Compiler\DLL\Binaries\x64\Debug\compilerCore.pdb (Partial PDB)
+  CompilerCore.vcxproj -> C:\Users\Lab 1 Alumno 11\Documents\Alberto Villa\Compilador\Compiler\DLL\Binaries\x64\Debug\compilerCore.dll
+  CompilerCore.vcxproj -> C:\Users\Lab 1 Alumno 11\Documents\Alberto Villa\Compilador\Compiler\DLL\Binaries\x64\Debug\compilerCore.pdb (Partial PDB)

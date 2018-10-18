@@ -67,11 +67,18 @@ bool compilerCore::synState_FunctionBlock::checkSyntax(string funcName)
 				if(!t->getLex().compare("["))
 				{
 					//Evaluate logical expression for the dimension
+					while (t->getLex().compare("]"))
+					{
+						t = m_lexAnalyzer->getNextToken();
+					}
+					t = m_lexAnalyzer->getNextToken();
 					if (!t->getLex().compare("="))
 					{
-						synState_Assign* s = new synState_Assign(m_lexAnalyzer, m_errorModule, m_symTable);
-						if (!s->checkSyntax())
-							return false;
+						//Evaluate logical expresion for assignment
+						while (t->getLex().compare(";"))
+						{
+							t = m_lexAnalyzer->getNextToken();
+						}
 					}
 					else
 					{
