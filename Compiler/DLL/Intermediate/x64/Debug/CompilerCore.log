@@ -1,12 +1,12 @@
 ﻿  Stdafx.cpp
   AssemblyInfo.cpp
   CompilerCore.cpp
-c:\users\lab 1 alumno 11\documents\alberto villa\compilador\compiler\compilercore\SynState_Statements.h(14): warning C4005: 'SYNTAX_ERROR_ID': macro redefinition
-  c:\users\lab 1 alumno 11\documents\alberto villa\compilador\compiler\compilercore\SynState_Var.h(10): note: see previous definition of 'SYNTAX_ERROR_ID'
-c:\users\lab 1 alumno 11\documents\alberto villa\compilador\compiler\compilercore\SynState_Param.h(10): warning C4005: 'SYNTAX_ERROR_ID': macro redefinition
-  c:\users\lab 1 alumno 11\documents\alberto villa\compilador\compiler\compilercore\SynState_Statements.h(14): note: see previous definition of 'SYNTAX_ERROR_ID'
-c:\users\lab 1 alumno 11\documents\alberto villa\compilador\compiler\compilercore\SynState_Function.h(13): warning C4005: 'SYNTAX_ERROR_PAREN': macro redefinition
-  c:\users\lab 1 alumno 11\documents\alberto villa\compilador\compiler\compilercore\SynState_Statements.h(6): note: see previous definition of 'SYNTAX_ERROR_PAREN'
+c:\users\casa\documents\beto\compiladores\compilador\compiler\compilercore\SynState_Statements.h(14): warning C4005: 'SYNTAX_ERROR_ID': macro redefinition
+  c:\users\casa\documents\beto\compiladores\compilador\compiler\compilercore\SynState_Var.h(10): note: see previous definition of 'SYNTAX_ERROR_ID'
+c:\users\casa\documents\beto\compiladores\compilador\compiler\compilercore\SynState_Param.h(10): warning C4005: 'SYNTAX_ERROR_ID': macro redefinition
+  c:\users\casa\documents\beto\compiladores\compilador\compiler\compilercore\SynState_Statements.h(14): note: see previous definition of 'SYNTAX_ERROR_ID'
+c:\users\casa\documents\beto\compiladores\compilador\compiler\compilercore\SynState_Function.h(13): warning C4005: 'SYNTAX_ERROR_PAREN': macro redefinition
+  c:\users\casa\documents\beto\compiladores\compilador\compiler\compilercore\SynState_Statements.h(6): note: see previous definition of 'SYNTAX_ERROR_PAREN'
 CompilerCore.cpp(85): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
 CompilerCore.cpp(102): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
   ErrorModule.cpp
@@ -15,33 +15,35 @@ CompilerCore.cpp(102): warning C4267: 'argument': conversion from 'size_t' to 'i
   LocalNode.cpp
   SymTable.cpp
   SynAnalyzer.cpp
-c:\users\lab 1 alumno 11\documents\alberto villa\compilador\compiler\compilercore\SynState_Statements.h(14): warning C4005: 'SYNTAX_ERROR_ID': macro redefinition
-  c:\users\lab 1 alumno 11\documents\alberto villa\compilador\compiler\compilercore\SynState_Var.h(10): note: see previous definition of 'SYNTAX_ERROR_ID'
-c:\users\lab 1 alumno 11\documents\alberto villa\compilador\compiler\compilercore\SynState_Param.h(10): warning C4005: 'SYNTAX_ERROR_ID': macro redefinition
-  c:\users\lab 1 alumno 11\documents\alberto villa\compilador\compiler\compilercore\SynState_Statements.h(14): note: see previous definition of 'SYNTAX_ERROR_ID'
-c:\users\lab 1 alumno 11\documents\alberto villa\compilador\compiler\compilercore\SynState_Function.h(13): warning C4005: 'SYNTAX_ERROR_PAREN': macro redefinition
-  c:\users\lab 1 alumno 11\documents\alberto villa\compilador\compiler\compilercore\SynState_Statements.h(6): note: see previous definition of 'SYNTAX_ERROR_PAREN'
+c:\users\casa\documents\beto\compiladores\compilador\compiler\compilercore\SynState_Statements.h(14): warning C4005: 'SYNTAX_ERROR_ID': macro redefinition
+  c:\users\casa\documents\beto\compiladores\compilador\compiler\compilercore\SynState_Var.h(10): note: see previous definition of 'SYNTAX_ERROR_ID'
+c:\users\casa\documents\beto\compiladores\compilador\compiler\compilercore\SynState_Param.h(10): warning C4005: 'SYNTAX_ERROR_ID': macro redefinition
+  c:\users\casa\documents\beto\compiladores\compilador\compiler\compilercore\SynState_Statements.h(14): note: see previous definition of 'SYNTAX_ERROR_ID'
+c:\users\casa\documents\beto\compiladores\compilador\compiler\compilercore\SynState_Function.h(13): warning C4005: 'SYNTAX_ERROR_PAREN': macro redefinition
+  c:\users\casa\documents\beto\compiladores\compilador\compiler\compilercore\SynState_Statements.h(6): note: see previous definition of 'SYNTAX_ERROR_PAREN'
   SynState.cpp
   SynState_FunctionBlock.cpp
-c:\users\lab 1 alumno 11\documents\alberto villa\compilador\compiler\compilercore\SynState_Var.h(10): warning C4005: 'SYNTAX_ERROR_ID': macro redefinition
-  c:\users\lab 1 alumno 11\documents\alberto villa\compilador\compiler\compilercore\SynState_Statements.h(14): note: see previous definition of 'SYNTAX_ERROR_ID'
+c:\users\casa\documents\beto\compiladores\compilador\compiler\compilercore\SynState_Var.h(10): warning C4005: 'SYNTAX_ERROR_ID': macro redefinition
+  c:\users\casa\documents\beto\compiladores\compilador\compiler\compilercore\SynState_Statements.h(14): note: see previous definition of 'SYNTAX_ERROR_ID'
   SynState_Param.cpp
   SynState_Function.cpp
-c:\users\lab 1 alumno 11\documents\alberto villa\compilador\compiler\compilercore\SynState_Var.h(10): warning C4005: 'SYNTAX_ERROR_ID': macro redefinition
-  c:\users\lab 1 alumno 11\documents\alberto villa\compilador\compiler\compilercore\SynState_Statements.h(14): note: see previous definition of 'SYNTAX_ERROR_ID'
-c:\users\lab 1 alumno 11\documents\alberto villa\compilador\compiler\compilercore\SynState_Function.h(13): warning C4005: 'SYNTAX_ERROR_PAREN': macro redefinition
-  c:\users\lab 1 alumno 11\documents\alberto villa\compilador\compiler\compilercore\SynState_Statements.h(6): note: see previous definition of 'SYNTAX_ERROR_PAREN'
+c:\users\casa\documents\beto\compiladores\compilador\compiler\compilercore\SynState_Var.h(10): warning C4005: 'SYNTAX_ERROR_ID': macro redefinition
+  c:\users\casa\documents\beto\compiladores\compilador\compiler\compilercore\SynState_Statements.h(14): note: see previous definition of 'SYNTAX_ERROR_ID'
+c:\users\casa\documents\beto\compiladores\compilador\compiler\compilercore\SynState_Function.h(13): warning C4005: 'SYNTAX_ERROR_PAREN': macro redefinition
+  c:\users\casa\documents\beto\compiladores\compilador\compiler\compilercore\SynState_Statements.h(6): note: see previous definition of 'SYNTAX_ERROR_PAREN'
   SynState_Program.cpp
-c:\users\lab 1 alumno 11\documents\alberto villa\compilador\compiler\compilercore\SynState_Statements.h(14): warning C4005: 'SYNTAX_ERROR_ID': macro redefinition
-  c:\users\lab 1 alumno 11\documents\alberto villa\compilador\compiler\compilercore\SynState_Var.h(10): note: see previous definition of 'SYNTAX_ERROR_ID'
-c:\users\lab 1 alumno 11\documents\alberto villa\compilador\compiler\compilercore\SynState_Param.h(10): warning C4005: 'SYNTAX_ERROR_ID': macro redefinition
-  c:\users\lab 1 alumno 11\documents\alberto villa\compilador\compiler\compilercore\SynState_Statements.h(14): note: see previous definition of 'SYNTAX_ERROR_ID'
-c:\users\lab 1 alumno 11\documents\alberto villa\compilador\compiler\compilercore\SynState_Function.h(13): warning C4005: 'SYNTAX_ERROR_PAREN': macro redefinition
-  c:\users\lab 1 alumno 11\documents\alberto villa\compilador\compiler\compilercore\SynState_Statements.h(6): note: see previous definition of 'SYNTAX_ERROR_PAREN'
+c:\users\casa\documents\beto\compiladores\compilador\compiler\compilercore\SynState_Statements.h(14): warning C4005: 'SYNTAX_ERROR_ID': macro redefinition
+  c:\users\casa\documents\beto\compiladores\compilador\compiler\compilercore\SynState_Var.h(10): note: see previous definition of 'SYNTAX_ERROR_ID'
+c:\users\casa\documents\beto\compiladores\compilador\compiler\compilercore\SynState_Param.h(10): warning C4005: 'SYNTAX_ERROR_ID': macro redefinition
+  c:\users\casa\documents\beto\compiladores\compilador\compiler\compilercore\SynState_Statements.h(14): note: see previous definition of 'SYNTAX_ERROR_ID'
+c:\users\casa\documents\beto\compiladores\compilador\compiler\compilercore\SynState_Function.h(13): warning C4005: 'SYNTAX_ERROR_PAREN': macro redefinition
+  c:\users\casa\documents\beto\compiladores\compilador\compiler\compilercore\SynState_Statements.h(6): note: see previous definition of 'SYNTAX_ERROR_PAREN'
   SynState_StatementBlock.cpp
   SynState_Statements.cpp
   SynState_Var.cpp
   Token.cpp
   Generating Code...
   .NETFramework,Version=v4.5.2.AssemblyAttributes.cpp
-  CompilerCore.vcxproj -> C:\Users\Lab 1 Alumno 11\Documents\Alberto Villa\Compilador\Compiler\DLL\Binaries\x64\Debug\compilerCore.dll
+  AssemblyInfo.obj : /DEBUG:FASTLINK is not supported when managed code is present; restarting link with /DEBUG:FULL
+  CompilerCore.vcxproj -> C:\Users\Casa\Documents\Beto\Compiladores\Compilador\Compiler\DLL\Binaries\x64\Debug\compilerCore.dll
+  CompilerCore.vcxproj -> C:\Users\Casa\Documents\Beto\Compiladores\Compilador\Compiler\DLL\Binaries\x64\Debug\compilerCore.pdb (Partial PDB)

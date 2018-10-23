@@ -12,6 +12,8 @@ namespace compilerCore
 #define SYNTAX_ERROR_CPAREN "Expected )"
 #define SYNTAX_ERROR_ASSIGN "Expected ="
 #define SYNTAX_ERROR_ID "Expected ID"
+#define SYNTAX_ERROR_SEPARATOR "Expected :"
+#define SYNTAX_ERROR_CONSTANT "Expected constant"
 	///////////////////////////////////
 	///           IF                ///
 	///////////////////////////////////

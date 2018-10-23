@@ -28,10 +28,38 @@ bool compilerCore::symTable::addSymbol(string name, compilerCore::nodeData symbo
 	return true;
 }
 
+bool compilerCore::symTable::addSymbol(string name, SCOPE scope, int dimen, string funcName)
+{
+	if (!symbolExists(name, scope, funcName))
+	{
+		//Add symbol to symTable
+	}
+	else
+	{
+		//Add symbol to local node
+	}
+	return true;
+}
+
 bool compilerCore::symTable::symbolExists(string name, map<string, compilerCore::globalNode>::iterator* it)
 {
 	*it = m_symbols.find(name);
 	return (*it != m_symbols.end());
+}
+
+bool compilerCore::symTable::symbolExists(string name, SCOPE scope, string funcName)
+{
+	//Symbol exists
+	if (m_symbols.find(name) != m_symbols.end())
+	{
+		
+	}
+	//Symbol doesn't exist
+	else
+	{
+		return false;
+	}
+	return true;
 }
 
 string compilerCore::symTable::getSymbolName() 
