@@ -151,6 +151,7 @@
     <ClInclude Include="SymTable.h" />
     <ClInclude Include="SynAnalyzer.h" />
     <ClInclude Include="SynState.h" />
+    <ClInclude Include="SynState_ExpLog.h" />
     <ClInclude Include="SynState_FunctionBlock.h" />
     <ClInclude Include="SynState_Param.h" />
     <ClInclude Include="SynState_Function.h" />
@@ -176,6 +177,7 @@
     <ClCompile Include="SymTable.cpp" />
     <ClCompile Include="SynAnalyzer.cpp" />
     <ClCompile Include="SynState.cpp" />
+    <ClCompile Include="SynState_ExpLog.cpp" />
     <ClCompile Include="SynState_FunctionBlock.cpp" />
     <ClCompile Include="SynState_Param.cpp" />
     <ClCompile Include="SynState_Function.cpp" />

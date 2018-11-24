@@ -22,13 +22,16 @@ bool compilerCore::synState_If::checkSyntax()
 		if (!m_errorModule->addErrorSyn(t->getLineNumber(), SYNTAX_ERROR_PAREN))
 			return false;
 	}
-	else
+	//Check logical expression
+	synState_ExpLog* e = new synState_ExpLog(m_lexAnalyzer, m_errorModule, m_symTable);
+	if (!e->checkSyntax())
+		return false;
+	t = m_lexAnalyzer->getNextToken();
+	if (t->getLex().compare(")"))
 	{
-		//Check logical expression
-		while (m_lexAnalyzer->peekToken()->getLex().compare(")"))
-		{
-			t = m_lexAnalyzer->getNextToken();
-		}
+		//Error - Expected ")"
+		if (!m_errorModule->addErrorSyn(t->getLineNumber(), SYNTAX_ERROR_CPAREN))
+			return false;
 	}
 	t = m_lexAnalyzer->getNextToken();
 	if (t->getLex().compare("{"))
@@ -81,13 +84,16 @@ bool compilerCore::synState_While::checkSyntax()
 		if (!m_errorModule->addErrorSyn(t->getLineNumber(), SYNTAX_ERROR_PAREN))
 			return false;
 	}
-	else
+	//Check logical expression
+	synState_ExpLog* e = new synState_ExpLog(m_lexAnalyzer, m_errorModule, m_symTable);
+	if (!e->checkSyntax())
+		return false;
+	t = m_lexAnalyzer->getNextToken();
+	if (t->getLex().compare(")"))
 	{
-		//Check logical expression
-		while (m_lexAnalyzer->peekToken()->getLex().compare(")"))
-		{
-			t = m_lexAnalyzer->getNextToken();
-		}
+		//Error - Expected ")"
+		if (!m_errorModule->addErrorSyn(t->getLineNumber(), SYNTAX_ERROR_CPAREN))
+			return false;
 	}
 	t = m_lexAnalyzer->getNextToken();
 	if (t->getLex().compare("{"))
@@ -139,12 +145,11 @@ bool compilerCore::synState_For::checkSyntax()
 		if (!m_errorModule->addErrorSyn(t->getLineNumber(), SYNTAX_ERROR_SEMICOLON))
 			return false;
 	}
-	t = m_lexAnalyzer->getNextToken();
 	//Check logical expression
-	while (m_lexAnalyzer->peekToken()->getLex().compare(";"))
-	{
-		t = m_lexAnalyzer->getNextToken();
-	}
+	synState_ExpLog* e = new synState_ExpLog(m_lexAnalyzer, m_errorModule, m_symTable);
+	if (!e->checkSyntax())
+		return false;
+	t = m_lexAnalyzer->getNextToken();
 	if (t->getLex().compare(";"))
 	{
 		//Error - Expected ;
@@ -152,7 +157,7 @@ bool compilerCore::synState_For::checkSyntax()
 			return false;
 	}
 	t = m_lexAnalyzer->getNextToken();
-	if (t->getLex().compare("inc") || t->getLex().compare("dec"))
+	if (t->getLex().compare("inc") && t->getLex().compare("dec"))
 	{
 		//Error - Increment or decrement expected
 		if (!m_errorModule->addErrorSyn(t->getLineNumber(), SYNTAX_ERROR_INC_DEC))
@@ -228,14 +233,19 @@ bool compilerCore::synState_Switch::checkSyntax()
 	t = m_lexAnalyzer->getNextToken();
 	if (!t->getLex().compare("["))
 	{
+		//Check logical expression
+		synState_ExpLog* e = new synState_ExpLog(m_lexAnalyzer, m_errorModule, m_symTable);
+		if (!e->checkSyntax())
+			return false;
 		t = m_lexAnalyzer->getNextToken();
-		//Evaluate logical expression
-		while (t->getLex().compare("]"))
+		if (t->getLex().compare("]"))
 		{
-			t = m_lexAnalyzer->getNextToken();
+			//Error - Expected "]"
+			if (!m_errorModule->addErrorSyn(t->getLineNumber(), SYNTAX_ERROR_CBRACKET))
+				return false;
 		}
+		t = m_lexAnalyzer->getNextToken();
 	}
-	t = m_lexAnalyzer->getNextToken();
 	if (t->getLex().compare(")"))
 	{
 		//Error - Expected )
@@ -516,12 +526,18 @@ bool compilerCore::synState_Assign::checkSyntax()
 	t = m_lexAnalyzer->getNextToken();
 	if (!t->getLex().compare("["))
 	{
+		//Check logical expression
+		synState_ExpLog* e = new synState_ExpLog(m_lexAnalyzer, m_errorModule, m_symTable);
+		if (!e->checkSyntax())
+			return false;
 		t = m_lexAnalyzer->getNextToken();
-		//Evaluate logical expression
-		while (t->getLex().compare("]"))
+		if (t->getLex().compare("]"))
 		{
-			t = m_lexAnalyzer->getNextToken();
+			//Error - Expected "]"
+			if (!m_errorModule->addErrorSyn(t->getLineNumber(), SYNTAX_ERROR_CBRACKET))
+				return false;
 		}
+		t = m_lexAnalyzer->getNextToken();
 	}
 	if (t->getLex().compare("="))
 	{
@@ -530,10 +546,15 @@ bool compilerCore::synState_Assign::checkSyntax()
 			return false;
 	}
 	//Evaluate logical expression for assignment
+	synState_ExpLog* e = new synState_ExpLog(m_lexAnalyzer, m_errorModule, m_symTable);
+	if (!e->checkSyntax())
+		return false;
 	t = m_lexAnalyzer->getNextToken();
-	while (t->getLex().compare(";"))
+	if (t->getLex().compare(";"))
 	{
-		t = m_lexAnalyzer->getNextToken();
+		//Error - Expected ";"
+		if (!m_errorModule->addErrorSyn(t->getLineNumber(), SYNTAX_ERROR_SEMICOLON))
+			return false;
 	}
 	return true;
 }
@@ -569,10 +590,16 @@ bool compilerCore::synState_Read::checkSyntax()
 	t = m_lexAnalyzer->getNextToken();
 	if (!t->getLex().compare("["))
 	{
-		//Evaluate logical expression for the dimension
-		while (t->getLex().compare("]"))
+		//Check logical expression
+		synState_ExpLog* e = new synState_ExpLog(m_lexAnalyzer, m_errorModule, m_symTable);
+		if (!e->checkSyntax())
+			return false;
+		t = m_lexAnalyzer->getNextToken();
+		if (t->getLex().compare("]"))
 		{
-			t = m_lexAnalyzer->getNextToken();
+			//Error - Expected "]"
+			if (!m_errorModule->addErrorSyn(t->getLineNumber(), SYNTAX_ERROR_CBRACKET))
+				return false;
 		}
 		t = m_lexAnalyzer->getNextToken();
 	}
@@ -613,11 +640,16 @@ bool compilerCore::synState_Print::checkSyntax()
 		if (!m_errorModule->addErrorSyn(t->getLineNumber(), SYNTAX_ERROR_PAREN))
 			return false;
 	}
+	//Check logical expression
+	synState_ExpLog* e = new synState_ExpLog(m_lexAnalyzer, m_errorModule, m_symTable);
+	if (!e->checkSyntax())
+		return false;
 	t = m_lexAnalyzer->getNextToken();
-	//Evaluate logical expression list
-	while (t->getLex().compare(")"))
+	if (t->getLex().compare(")"))
 	{
-		t = m_lexAnalyzer->getNextToken();
+		//Error - Expected ")"
+		if (!m_errorModule->addErrorSyn(t->getLineNumber(), SYNTAX_ERROR_CPAREN))
+			return false;
 	}
 	t = m_lexAnalyzer->getNextToken();
 	if (t->getLex().compare(";"))
@@ -643,11 +675,15 @@ compilerCore::synState_Return::~synState_Return()
 
 bool compilerCore::synState_Return::checkSyntax()
 {
+	synState_ExpLog* e = new synState_ExpLog(m_lexAnalyzer, m_errorModule, m_symTable);
+	if (!e->checkSyntax())
+		return false;
 	const token* t = m_lexAnalyzer->getNextToken();
-	//Evaluate logical expresion
-	while (t->getLex().compare(";"))
+	if (t->getLex().compare(")"))
 	{
-		t = m_lexAnalyzer->getNextToken();
+		//Error - Expected ")"
+		if (!m_errorModule->addErrorSyn(t->getLineNumber(), SYNTAX_ERROR_CPAREN))
+			return false;
 	}
 	return true;
 }
@@ -666,11 +702,21 @@ compilerCore::synState_FuncCall::~synState_FuncCall()
 
 bool compilerCore::synState_FuncCall::checkSyntax()
 {
+	//Check logical expression
+	synState_ExpLog* e = new synState_ExpLog(m_lexAnalyzer, m_errorModule, m_symTable);
+	if (!e->checkSyntax())
+		return false;
 	const token* t = m_lexAnalyzer->getNextToken();
-	//Evaluate logical expresion list
-	while (t->getLex().compare(")"))
+	if (t->getLex().compare(")"))
 	{
-		t = m_lexAnalyzer->getNextToken();
+		//Error - Expected ")"
+		if (!m_errorModule->addErrorSyn(t->getLineNumber(), SYNTAX_ERROR_CPAREN))
+			return false;
+	}
+	t = m_lexAnalyzer->getNextToken();
+	if (t->getLex().compare(";"))
+	{
+		//Error - Expected ";"
 	}
 	return true;
 }
@@ -730,19 +776,32 @@ bool compilerCore::synState_StatementBlock::checkSyntax()
 			{
 				if (!t->getLex().compare("["))
 				{
-					//Evaluate logical expression for the dimension
-					while (t->getLex().compare("]"))
+					//Check logical expression
+					synState_ExpLog* e = new synState_ExpLog(m_lexAnalyzer, m_errorModule, m_symTable);
+					if (!e->checkSyntax())
+						return false;
+					t = m_lexAnalyzer->getNextToken();
+					if (t->getLex().compare("]"))
 					{
-						t = m_lexAnalyzer->getNextToken();
+						//Error - Expected "]"
+						if (!m_errorModule->addErrorSyn(t->getLineNumber(), SYNTAX_ERROR_CBRACKET))
+							return false;
 					}
 					t = m_lexAnalyzer->getNextToken();
 					if (!t->getLex().compare("="))
 					{
-						//Evaluate logical expresion for assignment
-						while (t->getLex().compare(";"))
+						//Check logical expression
+						synState_ExpLog* e = new synState_ExpLog(m_lexAnalyzer, m_errorModule, m_symTable);
+						if (!e->checkSyntax())
+							return false;
+						t = m_lexAnalyzer->getNextToken();
+						if (t->getLex().compare(";"))
 						{
-							t = m_lexAnalyzer->getNextToken();
+							//Error - Expected ";"
+							if (!m_errorModule->addErrorSyn(t->getLineNumber(), SYNTAX_ERROR_SEMICOLON))
+								return false;
 						}
+						t = m_lexAnalyzer->getNextToken();
 					}
 					else
 					{
@@ -753,11 +812,18 @@ bool compilerCore::synState_StatementBlock::checkSyntax()
 				}
 				else if (!t->getLex().compare("="))
 				{
-					//Evaluate logical expresion for assignment
-					while (t->getLex().compare(";"))
+					//Check logical expression
+					synState_ExpLog* e = new synState_ExpLog(m_lexAnalyzer, m_errorModule, m_symTable);
+					if (!e->checkSyntax())
+						return false;
+					t = m_lexAnalyzer->getNextToken();
+					if (t->getLex().compare(";"))
 					{
-						t = m_lexAnalyzer->getNextToken();
+						//Error - Expected ";"
+						if (!m_errorModule->addErrorSyn(t->getLineNumber(), SYNTAX_ERROR_SEMICOLON))
+							return false;
 					}
+					t = m_lexAnalyzer->getNextToken();
 				}
 				else
 				{
@@ -787,6 +853,75 @@ bool compilerCore::synState_StatementBlock::checkSyntax()
 				return false;
 			break;
 		}
+	}
+	return true;
+}
+
+compilerCore::synState_ExpLog::synState_ExpLog(lexAnalyzer* lexAnalyzer, errorModule^ errorModule, symTable* symTable)
+{
+	m_lexAnalyzer = lexAnalyzer;
+	m_errorModule = errorModule;
+	m_symTable = symTable;
+}
+
+compilerCore::synState_ExpLog::~synState_ExpLog()
+{
+
+}
+
+bool compilerCore::synState_ExpLog::checkSyntax()
+{
+	const token* t = m_lexAnalyzer->getNextToken();
+	if (t->getType == TOKEN_TYPE::UNARY_LOGICAL_OP)
+	{
+		t = m_lexAnalyzer->getNextToken();
+	}
+	if (!t->getLex().compare("("))
+	{
+		synState_ExpLog* e = new synState_ExpLog(m_lexAnalyzer, m_errorModule, m_symTable);
+		if (!e->checkSyntax())
+			return false;
+		t = m_lexAnalyzer->getNextToken();
+		if (t->getLex().compare(")"))
+		{
+			//Error - Expected ")"
+			if (!m_errorModule->addErrorSyn(t->getLineNumber(), SYNTAX_ERROR_CPAREN))
+				return false;
+		}
+	}
+	else if (t->getType() == TOKEN_TYPE::INT || t->getType() == TOKEN_TYPE::FLOAT || t->getType() == TOKEN_TYPE::STRING || !t->getLex().compare("false") || !t->getLex().compare("true"))
+	{
+
+	}
+	else if (t->getType() == TOKEN_TYPE::ID)
+	{
+		if (!m_lexAnalyzer->peekToken()->getLex().compare("["))
+		{
+			t = m_lexAnalyzer->getNextToken();
+			synState_ExpLog* e = new synState_ExpLog(m_lexAnalyzer, m_errorModule, m_symTable);
+			if (!e->checkSyntax())
+				return false;
+			t = m_lexAnalyzer->getNextToken();
+			if (t->getLex().compare("]"))
+			{
+				//Error - Expected "]"
+				if (!m_errorModule->addErrorSyn(t->getLineNumber(), SYNTAX_ERROR_CBRACKET))
+					return false;
+			}
+		}
+		else if (!m_lexAnalyzer->peekToken()->getLex().compare("("))
+		{
+			t = m_lexAnalyzer->getNextToken();
+			synState_FuncCall* f = new synState_FuncCall(m_lexAnalyzer, m_errorModule, m_symTable);
+			if (!f->checkSyntax())
+				return false;
+		}
+	}
+	if (m_lexAnalyzer->peekToken()->getType() == TOKEN_TYPE::ARIT_OP || m_lexAnalyzer->peekToken()->getType() == TOKEN_TYPE::LOGICAL_OP || m_lexAnalyzer->peekToken()->getType() == TOKEN_TYPE::REL_OP)
+	{
+		synState_ExpLog* e = new synState_ExpLog(m_lexAnalyzer, m_errorModule, m_symTable);
+		if (!e->checkSyntax())
+			return false;
 	}
 	return true;
 }

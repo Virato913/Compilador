@@ -14,6 +14,7 @@ namespace compilerCore
 #define SYNTAX_ERROR_ID "Expected ID"
 #define SYNTAX_ERROR_SEPARATOR "Expected :"
 #define SYNTAX_ERROR_CONSTANT "Expected constant"
+#define SYNTAX_ERROR_CBRACKET "Expected ]"
 	///////////////////////////////////
 	///           IF                ///
 	///////////////////////////////////
@@ -112,6 +113,16 @@ namespace compilerCore
 	public:
 		synState_StatementBlock(lexAnalyzer* lexAnalyzer, errorModule^ errorModule, symTable* symTable);
 		~synState_StatementBlock();
+		bool checkSyntax();
+	};
+	///////////////////////////////////
+	///           EXP_LOG           ///
+	///////////////////////////////////
+	class synState_ExpLog : public synState
+	{
+	public:
+		synState_ExpLog(lexAnalyzer* lexAnalyzer, errorModule^ errorModule, symTable* symTable);
+		~synState_ExpLog();
 		bool checkSyntax();
 	};
 }

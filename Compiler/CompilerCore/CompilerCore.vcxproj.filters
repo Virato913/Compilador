@@ -69,6 +69,9 @@
     <ClInclude Include="SynState_StatementBlock.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="SynState_ExpLog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CompilerCore.cpp">
@@ -123,6 +126,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SynState_StatementBlock.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SynState_ExpLog.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
