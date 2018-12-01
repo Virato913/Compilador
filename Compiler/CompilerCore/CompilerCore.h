@@ -9,8 +9,9 @@
 using namespace System;
 
 #include "LexAnalyzer.h"
-#include "ErrorModule.h"
 #include "SynAnalyzer.h"
+#include "SemAnalyzer.h"
+#include "ErrorModule.h"
 
 using namespace System;
 
@@ -22,9 +23,12 @@ namespace compilerCore {
 	private:
 		lexAnalyzer* m_lexAnalyzer;     // LEX ANALYZER INSTANCE
 		synAnalyzer* m_synAnalyzer;		// SYN ANALYZER INSTANCE
+		semAnalyzer* m_semAnalyzer;		// SEM ANALYZER INSTANCE
+
 		errorModule^ m_errorModule;		// ERRORS MODULE
 		void lexAnalysis(String^);
 		void synAnalysis();
+		void semAnalysis();
 		cli::array<String^>^ getCompilationDetails();
 		cli::array<cli::array<String^>^, 2>^ getCompDetails();
 

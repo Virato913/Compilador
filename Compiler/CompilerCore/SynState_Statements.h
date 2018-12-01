@@ -1,5 +1,6 @@
 #pragma once
 #include "SynState.h"
+#include "ExpLog.h"
 
 namespace compilerCore
 {
@@ -120,9 +121,11 @@ namespace compilerCore
 	///////////////////////////////////
 	class synState_ExpLog : public synState
 	{
+	private:
+		vector<const token*>* m_expVec;
 	public:
-		synState_ExpLog(lexAnalyzer* lexAnalyzer, errorModule^ errorModule, symTable* symTable);
+		synState_ExpLog(lexAnalyzer* lexAnalyzer, errorModule^ errorModule, symTable* symTable, vector<const token*>* expVec = nullptr);
 		~synState_ExpLog();
-		bool checkSyntax();
+		bool checkSyntax(string funcName = "", string symbol = "");
 	};
 }

@@ -69,7 +69,13 @@
     <ClInclude Include="SynState_StatementBlock.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SynState_ExpLog.h">
+    <ClInclude Include="SemAnalyzer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ExpLog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ExpLogTreeNode.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -128,7 +134,13 @@
     <ClCompile Include="SynState_StatementBlock.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SynState_ExpLog.cpp">
+    <ClCompile Include="SemAnalyzer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ExpLog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ExpLogTreeNode.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

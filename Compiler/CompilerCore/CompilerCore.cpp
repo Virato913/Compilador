@@ -8,7 +8,7 @@ compilerCore::Manager::Manager()
 {
 	m_errorModule = gcnew errorModule();
 	m_lexAnalyzer = new lexAnalyzer(m_errorModule);
-	m_synAnalyzer = new synAnalyzer(m_lexAnalyzer, m_errorModule);
+	m_synAnalyzer = new synAnalyzer(m_lexAnalyzer, m_semAnalyzer, m_errorModule);
 }
 
 compilerCore::Manager::~Manager()
@@ -27,6 +27,13 @@ compilerCore::Manager::~Manager()
 		m_synAnalyzer = nullptr;
 	}
 
+	// Free memory of SEM analyzer
+	if (m_semAnalyzer != nullptr)
+	{
+		delete m_semAnalyzer;
+		m_semAnalyzer = nullptr;
+	}
+
 	// Memory of ERRORS MODULE is automatically collected (allocated with gcnew)
 }
 
@@ -38,7 +45,7 @@ cli::array<String^>^ compilerCore::Manager::compileProgram(String^ sourceCode)
 	cli::array<String ^> ^ compilationDetails;
 
 	// Clear state if all pointers are valid
-	if (m_errorModule && m_lexAnalyzer != nullptr)
+	if (m_errorModule && m_lexAnalyzer)
 	{
 		m_errorModule->reset();
 		m_lexAnalyzer->reset();
@@ -51,6 +58,8 @@ cli::array<String^>^ compilerCore::Manager::compileProgram(String^ sourceCode)
 	lexAnalysis(sourceCode);
 
 	synAnalysis();
+
+	semAnalysis();
 
 	compilationDetails = getCompilationDetails();
 
@@ -75,6 +84,14 @@ void compilerCore::Manager::synAnalysis()
 	if (m_synAnalyzer != nullptr)
 	{
 		m_synAnalyzer->checkSyntax();
+	}
+}
+
+void compilerCore::Manager::semAnalysis()
+{
+	if (m_semAnalyzer != nullptr)
+	{
+		m_semAnalyzer->checkExpressions();
 	}
 }
 

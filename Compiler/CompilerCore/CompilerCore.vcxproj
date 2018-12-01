@@ -143,15 +143,17 @@
   <ItemGroup>
     <ClInclude Include="CompilerCore.h" />
     <ClInclude Include="ErrorModule.h" />
+    <ClInclude Include="ExpLogTreeNode.h" />
     <ClInclude Include="GlobalNode.h" />
     <ClInclude Include="LexAnalyzer.h" />
     <ClInclude Include="LocalNode.h" />
     <ClInclude Include="resource.h" />
+    <ClInclude Include="SemAnalyzer.h" />
     <ClInclude Include="Stdafx.h" />
     <ClInclude Include="SymTable.h" />
     <ClInclude Include="SynAnalyzer.h" />
     <ClInclude Include="SynState.h" />
-    <ClInclude Include="SynState_ExpLog.h" />
+    <ClInclude Include="ExpLog.h" />
     <ClInclude Include="SynState_FunctionBlock.h" />
     <ClInclude Include="SynState_Param.h" />
     <ClInclude Include="SynState_Function.h" />
@@ -165,9 +167,11 @@
     <ClCompile Include="AssemblyInfo.cpp" />
     <ClCompile Include="CompilerCore.cpp" />
     <ClCompile Include="ErrorModule.cpp" />
+    <ClCompile Include="ExpLogTreeNode.cpp" />
     <ClCompile Include="GlobalNode.cpp" />
     <ClCompile Include="LexAnalyzer.cpp" />
     <ClCompile Include="LocalNode.cpp" />
+    <ClCompile Include="SemAnalyzer.cpp" />
     <ClCompile Include="Stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
@@ -177,7 +181,7 @@
     <ClCompile Include="SymTable.cpp" />
     <ClCompile Include="SynAnalyzer.cpp" />
     <ClCompile Include="SynState.cpp" />
-    <ClCompile Include="SynState_ExpLog.cpp" />
+    <ClCompile Include="ExpLog.cpp" />
     <ClCompile Include="SynState_FunctionBlock.cpp" />
     <ClCompile Include="SynState_Param.cpp" />
     <ClCompile Include="SynState_Function.cpp" />

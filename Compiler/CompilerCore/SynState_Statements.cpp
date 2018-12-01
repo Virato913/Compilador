@@ -857,11 +857,12 @@ bool compilerCore::synState_StatementBlock::checkSyntax()
 	return true;
 }
 
-compilerCore::synState_ExpLog::synState_ExpLog(lexAnalyzer* lexAnalyzer, errorModule^ errorModule, symTable* symTable)
+compilerCore::synState_ExpLog::synState_ExpLog(lexAnalyzer* lexAnalyzer, errorModule^ errorModule, symTable* symTable, vector<const token*>* expVec)
 {
 	m_lexAnalyzer = lexAnalyzer;
 	m_errorModule = errorModule;
 	m_symTable = symTable;
+	m_expVec = expVec;
 }
 
 compilerCore::synState_ExpLog::~synState_ExpLog()
@@ -869,18 +870,23 @@ compilerCore::synState_ExpLog::~synState_ExpLog()
 
 }
 
-bool compilerCore::synState_ExpLog::checkSyntax()
+bool compilerCore::synState_ExpLog::checkSyntax(string funcName, string symbolToUpdate)
 {
+	int errorCount = m_errorModule->Errors->Length;
 	const token* t = m_lexAnalyzer->getNextToken();
+	if (!m_expVec)
+		m_expVec = new vector<const token*>();
 	if (t->getType == TOKEN_TYPE::UNARY_LOGICAL_OP)
 	{
+		m_expVec->push_back(t);
 		t = m_lexAnalyzer->getNextToken();
 	}
 	if (!t->getLex().compare("("))
 	{
 		synState_ExpLog* e = new synState_ExpLog(m_lexAnalyzer, m_errorModule, m_symTable);
-		if (!e->checkSyntax())
+		if (!e->checkSyntax(funcName, symbolToUpdate))
 			return false;
+		m_expVec->push_back(t);
 		t = m_lexAnalyzer->getNextToken();
 		if (t->getLex().compare(")"))
 		{
@@ -897,10 +903,12 @@ bool compilerCore::synState_ExpLog::checkSyntax()
 	{
 		if (!m_lexAnalyzer->peekToken()->getLex().compare("["))
 		{
+			m_expVec->push_back(t);
 			t = m_lexAnalyzer->getNextToken();
 			synState_ExpLog* e = new synState_ExpLog(m_lexAnalyzer, m_errorModule, m_symTable);
-			if (!e->checkSyntax())
+			if (!e->checkSyntax(funcName, symbolToUpdate))
 				return false;
+			m_expVec->push_back(t);
 			t = m_lexAnalyzer->getNextToken();
 			if (t->getLex().compare("]"))
 			{
@@ -911,6 +919,7 @@ bool compilerCore::synState_ExpLog::checkSyntax()
 		}
 		else if (!m_lexAnalyzer->peekToken()->getLex().compare("("))
 		{
+			m_expVec->push_back(t);
 			t = m_lexAnalyzer->getNextToken();
 			synState_FuncCall* f = new synState_FuncCall(m_lexAnalyzer, m_errorModule, m_symTable);
 			if (!f->checkSyntax())
@@ -920,8 +929,12 @@ bool compilerCore::synState_ExpLog::checkSyntax()
 	if (m_lexAnalyzer->peekToken()->getType() == TOKEN_TYPE::ARIT_OP || m_lexAnalyzer->peekToken()->getType() == TOKEN_TYPE::LOGICAL_OP || m_lexAnalyzer->peekToken()->getType() == TOKEN_TYPE::REL_OP)
 	{
 		synState_ExpLog* e = new synState_ExpLog(m_lexAnalyzer, m_errorModule, m_symTable);
-		if (!e->checkSyntax())
+		if (!e->checkSyntax(funcName, symbolToUpdate))
 			return false;
+	}
+	if (!(m_errorModule->Errors->Length > errorCount))
+	{
+		expLog newExpLog(t->getLineNumber(), funcName, *m_expVec, symbolToUpdate);
 	}
 	return true;
 }
