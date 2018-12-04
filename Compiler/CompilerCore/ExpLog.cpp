@@ -23,6 +23,7 @@ void compilerCore::expLog::buildTree()
 	//First, m_exp needs to be converted to postfix notation which will be stored in m_postFixExp
 	infixToPostfix();
 	//After that, the tree is actually built from the postfix expression
+	postfixToTree();
 }
 
 bool compilerCore::expLog::validateTree()
@@ -33,90 +34,100 @@ bool compilerCore::expLog::validateTree()
 void compilerCore::expLog::infixToPostfix()
 {
 	stack<const token*> opStack;
-	for (auto it = m_exp.begin(); it != m_exp.end(); it++)
+	for (int i = 0; i < m_exp.size(); i++)
 	{
-		if ((*it)->getType() != TOKEN_TYPE::ARIT_OP && (*it)->getType() != TOKEN_TYPE::AGROUP_OP && (*it)->getType() != TOKEN_TYPE::REL_OP)
+		if (m_exp[i]->getType() != TOKEN_TYPE::ARIT_OP &&
+			m_exp[i]->getType() != TOKEN_TYPE::AGROUP_OP &&
+			m_exp[i]->getType() != TOKEN_TYPE::REL_OP &&
+			m_exp[i]->getType() != TOKEN_TYPE::LOGICAL_OP &&
+			m_exp[i]->getType() != TOKEN_TYPE::UNARY_LOGICAL_OP)
 		{
-			m_postFixExp.push_back((*it));
+			m_postFixExp.push_back(m_exp[i]);
 		}
 		else
 		{
-			if ((*it)->getType() == TOKEN_TYPE::ARIT_OP)
+			if (m_exp[i]->getType() == TOKEN_TYPE::ARIT_OP)
 			{
 				if (opStack.empty() || !opStack.top()->getLex().compare("("))
 				{
-					opStack.push((*it));
+					opStack.push(m_exp[i]);
 				}
 				else
 				{
-					if (!(*it)->getLex().compare("+") || !(*it)->getLex().compare("-"))
+					if (!m_exp[i]->getLex().compare("+") || !m_exp[i]->getLex().compare("-"))
 					{
-						while (!opStack.empty() && (!opStack.top()->getLex().compare("*") || !opStack.top()->getLex().compare("/") || !opStack.top()->getLex().compare("%") || !opStack.top()->getLex().compare("^")))
+						while (!opStack.empty() &&
+							(!opStack.top()->getLex().compare("*") ||
+								!opStack.top()->getLex().compare("/") ||
+								!opStack.top()->getLex().compare("%") ||
+								!opStack.top()->getLex().compare("^")))
 						{
 							m_postFixExp.push_back(opStack.top());
 							opStack.pop();
 						}
 						if (opStack.empty() || !opStack.top()->getLex().compare("("))
-							opStack.push((*it));
+							opStack.push(m_exp[i]);
 						else
 						{
 							if (!opStack.top()->getLex().compare("+") || !opStack.top()->getLex().compare("-"))
 							{
 								m_postFixExp.push_back(opStack.top());
 								opStack.pop();
-								opStack.push((*it));
+								opStack.push(m_exp[i]);
 							}
 						}
 					}
-					else if (!(*it)->getLex().compare("*") || !(*it)->getLex().compare("/") || !(*it)->getLex().compare("%"))
+					else if (!m_exp[i]->getLex().compare("*") || !m_exp[i]->getLex().compare("/") || !m_exp[i]->getLex().compare("%"))
 					{
-						while (!opStack.empty() && !(*it)->getLex().compare("^"))
+						while (!opStack.empty() && !opStack.top()->getLex().compare("^"))
 						{
 							m_postFixExp.push_back(opStack.top());
 							opStack.pop();
 						}
 						if (opStack.empty() || !opStack.top()->getLex().compare("("))
-							opStack.push((*it));
+							opStack.push(m_exp[i]);
 						else
 						{
 							if (!opStack.top()->getLex().compare("+") || !opStack.top()->getLex().compare("-"))
 							{
-								opStack.push((*it));
+								opStack.push(m_exp[i]);
 							}
-							else if (!(*it)->getLex().compare("*") || !(*it)->getLex().compare("/") || !(*it)->getLex().compare("%"))
+							else if (!m_exp[i]->getLex().compare("*") || !m_exp[i]->getLex().compare("/") || !m_exp[i]->getLex().compare("%"))
 							{
 								m_postFixExp.push_back(opStack.top());
 								opStack.pop();
-								opStack.push((*it));
+								opStack.push(m_exp[i]);
 							}
 						}
 					}
-					else if (!(*it)->getLex().compare("^"))
+					else if (!m_exp[i]->getLex().compare("^"))
 					{
-						if (!opStack.top()->getLex().compare("+") || !opStack.top()->getLex().compare("-"))
+						if (opStack.empty() || !opStack.top()->getLex().compare("("))
+							opStack.push(m_exp[i]);
+						else if (!opStack.top()->getLex().compare("+") ||
+							!opStack.top()->getLex().compare("-") ||
+							!opStack.top()->getLex().compare("*") ||
+							!opStack.top()->getLex().compare("/") ||
+							!opStack.top()->getLex().compare("%"))
 						{
-							opStack.push((*it));
+							opStack.push(m_exp[i]);
 						}
-						else if (!(*it)->getLex().compare("*") || !(*it)->getLex().compare("/") || !(*it)->getLex().compare("%"))
-						{
-							opStack.push((*it));
-						}
-						else if (!(*it)->getLex().compare("^"))
+						else if (!opStack.top()->getLex().compare("^"))
 						{
 							m_postFixExp.push_back(opStack.top());
 							opStack.pop();
-							opStack.push((*it));
+							opStack.push(m_exp[i]);
 						}
 					}
 				}
 			}
-			else if ((*it)->getType() == TOKEN_TYPE::AGROUP_OP)
+			else if (m_exp[i]->getType() == TOKEN_TYPE::AGROUP_OP)
 			{
-				if (!(*it)->getLex().compare("("))
+				if (!m_exp[i]->getLex().compare("("))
 				{
-					opStack.push((*it));
+					opStack.push(m_exp[i]);
 				}
-				if (!(*it)->getLex().compare(")"))
+				if (!m_exp[i]->getLex().compare(")"))
 				{
 					while (opStack.top()->getLex().compare("("))
 					{
@@ -126,6 +137,10 @@ void compilerCore::expLog::infixToPostfix()
 					opStack.pop();
 				}
 			}
+			else if (m_exp[i]->getType() == TOKEN_TYPE::LOGICAL_OP || m_exp[i]->getType() == TOKEN_TYPE::REL_OP || m_exp[i]->getType() == TOKEN_TYPE::UNARY_LOGICAL_OP)
+			{
+				m_postFixExp.push_back(opStack.top());
+			}
 		}
 	}
 	while (!opStack.empty())
@@ -133,4 +148,10 @@ void compilerCore::expLog::infixToPostfix()
 		m_postFixExp.push_back(opStack.top());
 		opStack.pop();
 	}
+}
+
+void compilerCore::expLog::postfixToTree()
+{
+	expLogTreeNode* tree = new expLogTreeNode();
+	m_tree = tree->constructTree(m_postFixExp);
 }

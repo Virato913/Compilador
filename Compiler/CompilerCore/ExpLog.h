@@ -24,6 +24,7 @@ namespace compilerCore
 		expLogTreeNode* m_tree;
 		NODE_RESULT m_expectedResult;
 		void infixToPostfix();
+		void postfixToTree();
 
 	public:
 		expLog(int lineNum, string funcName, vector<const token*> expVec, string symbolToUpdate = "");
