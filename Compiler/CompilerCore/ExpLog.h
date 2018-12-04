@@ -3,9 +3,11 @@
 #include "Token.h"
 #include "ExpLogTreeNode.h"
 
+#include <stack>
 #include <string>
 #include <vector>
 
+using std::stack;
 using std::string;
 using std::vector;
 
@@ -21,6 +23,7 @@ namespace compilerCore
 		vector<const token*> m_postFixExp;
 		expLogTreeNode* m_tree;
 		NODE_RESULT m_expectedResult;
+		void infixToPostfix();
 
 	public:
 		expLog(int lineNum, string funcName, vector<const token*> expVec, string symbolToUpdate = "");

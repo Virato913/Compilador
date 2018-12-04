@@ -1,6 +1,6 @@
 #pragma once
 
-namespace
+namespace compilerCore
 {
 	enum class NODE_RESULT
 	{

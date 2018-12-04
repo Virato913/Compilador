@@ -876,7 +876,7 @@ bool compilerCore::synState_ExpLog::checkSyntax(string funcName, string symbolTo
 	const token* t = m_lexAnalyzer->getNextToken();
 	if (!m_expVec)
 		m_expVec = new vector<const token*>();
-	if (t->getType == TOKEN_TYPE::UNARY_LOGICAL_OP)
+	if (t->getType() == TOKEN_TYPE::UNARY_LOGICAL_OP)
 	{
 		m_expVec->push_back(t);
 		t = m_lexAnalyzer->getNextToken();
@@ -934,7 +934,7 @@ bool compilerCore::synState_ExpLog::checkSyntax(string funcName, string symbolTo
 	}
 	if (!(m_errorModule->Errors->Length > errorCount))
 	{
-		expLog newExpLog(t->getLineNumber(), funcName, *m_expVec, symbolToUpdate);
+		expLog newExpLog(m_expVec->front()->getLineNumber(), funcName, *m_expVec, symbolToUpdate);
 	}
 	return true;
 }
