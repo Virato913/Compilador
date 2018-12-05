@@ -934,7 +934,7 @@ bool compilerCore::synState_ExpLog::checkSyntax(string funcName, string symbolTo
 	}
 	if (!(m_errorModule->Errors->Length > errorCount))
 	{
-		expLog newExpLog(m_expVec->front()->getLineNumber(), funcName, *m_expVec, symbolToUpdate);
+		
 	}
 	return true;
 }

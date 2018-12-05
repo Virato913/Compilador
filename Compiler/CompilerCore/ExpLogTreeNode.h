@@ -2,6 +2,7 @@
 
 #include "Token.h"
 
+#include <windows.h>
 #include <stack>
 #include <vector>
 
@@ -31,8 +32,9 @@ namespace compilerCore
 
 	public:
 		expLogTreeNode();
-		expLogTreeNode(const token* value);
+		expLogTreeNode(const token* value, string type = "");
 		~expLogTreeNode();
 		expLogTreeNode* constructTree(std::vector<const token*> postfixExp);
+		void* evaluateNode();
 	};
 }

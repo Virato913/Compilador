@@ -42,6 +42,13 @@ bool compilerCore::errorModule::addErrorSyn(int lineNum, const char* desc)
 	return addError(compilerCore::ERROR_PHASE::SYNTAX_ANALYZER, lineNum, strDesc, strLine);
 }
 
+bool compilerCore::errorModule::addErrorSem(int lineNum, const char* desc)
+{
+	String^ strDesc = gcnew String(desc);
+	String^ strLine = gcnew String("");
+	return addError(compilerCore::ERROR_PHASE::SEMANTIC_ANALYZER, lineNum, strDesc, strLine);
+}
+
 bool compilerCore::errorModule::addError(ERROR_PHASE errorPhase, int lineNumber, String^ errorDesc, String^ errorLine)
 {
 	if (m_numErrors < MAX_ERRORS)

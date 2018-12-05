@@ -34,6 +34,7 @@ namespace compilerCore
 		void reset();
 		bool addErrorLex(int lineNum, const char* desc, const char* line);
 		bool addErrorSyn(int lineNum, const char* desc);
+		bool addErrorSem(int lineNum, const char* desc);
 
 		property cli::array<String^>^ Errors
 		{

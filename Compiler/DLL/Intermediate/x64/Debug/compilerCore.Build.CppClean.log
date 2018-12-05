@@ -13,10 +13,10 @@ c:\users\alberto villa\documents\idv\sexto cuatrimestre\compiladores\compiler\dl
 c:\users\alberto villa\documents\idv\sexto cuatrimestre\compiladores\compiler\dll\intermediate\x64\debug\synstate.obj
 c:\users\alberto villa\documents\idv\sexto cuatrimestre\compiladores\compiler\dll\intermediate\x64\debug\synanalyzer.obj
 c:\users\alberto villa\documents\idv\sexto cuatrimestre\compiladores\compiler\dll\intermediate\x64\debug\symtable.obj
-c:\users\alberto villa\documents\idv\sexto cuatrimestre\compiladores\compiler\dll\intermediate\x64\debug\semanalyzer.obj
 c:\users\alberto villa\documents\idv\sexto cuatrimestre\compiladores\compiler\dll\intermediate\x64\debug\localnode.obj
 c:\users\alberto villa\documents\idv\sexto cuatrimestre\compiladores\compiler\dll\intermediate\x64\debug\lexanalyzer.obj
 c:\users\alberto villa\documents\idv\sexto cuatrimestre\compiladores\compiler\dll\intermediate\x64\debug\globalnode.obj
+c:\users\alberto villa\documents\idv\sexto cuatrimestre\compiladores\compiler\dll\intermediate\x64\debug\explogtreenode.obj
 c:\users\alberto villa\documents\idv\sexto cuatrimestre\compiladores\compiler\dll\intermediate\x64\debug\errormodule.obj
 c:\users\alberto villa\documents\idv\sexto cuatrimestre\compiladores\compiler\dll\intermediate\x64\debug\compilercore.obj
 c:\users\alberto villa\documents\idv\sexto cuatrimestre\compiladores\compiler\dll\intermediate\x64\debug\assemblyinfo.obj

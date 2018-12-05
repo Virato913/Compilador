@@ -11,6 +11,8 @@ CompilerCore.cpp(102): warning C4267: 'argument': conversion from 'size_t' to 'i
 CompilerCore.cpp(119): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
   ErrorModule.cpp
   ExpLogTreeNode.cpp
+ExpLogTreeNode.cpp(144): warning C4312: 'type cast': conversion from 'int' to 'void *' of greater size
+ExpLogTreeNode.cpp(150): warning C4312: 'type cast': conversion from 'DWORD' to 'void *' of greater size
   GlobalNode.cpp
   LexAnalyzer.cpp
   LocalNode.cpp
@@ -46,6 +48,7 @@ c:\users\alberto villa\documents\idv\sexto cuatrimestre\compiladores\compiler\co
   SynState_Var.cpp
   Token.cpp
   Generating Code...
+c:\users\alberto villa\documents\idv\sexto cuatrimestre\compiladores\compiler\compilercore\explogtreenode.cpp(158): warning C4715: 'compilerCore::expLogTreeNode::evaluateNode': not all control paths return a value
   .NETFramework,Version=v4.5.2.AssemblyAttributes.cpp
   AssemblyInfo.obj : /DEBUG:FASTLINK is not supported when managed code is present; restarting link with /DEBUG:FULL
   CompilerCore.vcxproj -> C:\Users\Alberto Villa\Documents\IDV\Sexto Cuatrimestre\Compiladores\Compiler\DLL\Binaries\x64\Debug\compilerCore.dll

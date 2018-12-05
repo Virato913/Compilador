@@ -31,5 +31,6 @@ namespace compilerCore
 		~expLog();
 		void buildTree();
 		bool validateTree();
+		int getLineNum();
 	};
 }

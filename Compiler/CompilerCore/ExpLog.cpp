@@ -28,7 +28,13 @@ void compilerCore::expLog::buildTree()
 
 bool compilerCore::expLog::validateTree()
 {
+
 	return true;
+}
+
+int compilerCore::expLog::getLineNum()
+{
+	return m_lineNum;
 }
 
 void compilerCore::expLog::infixToPostfix()
@@ -139,7 +145,7 @@ void compilerCore::expLog::infixToPostfix()
 			}
 			else if (m_exp[i]->getType() == TOKEN_TYPE::LOGICAL_OP || m_exp[i]->getType() == TOKEN_TYPE::REL_OP || m_exp[i]->getType() == TOKEN_TYPE::UNARY_LOGICAL_OP)
 			{
-				m_postFixExp.push_back(opStack.top());
+				opStack.push(m_exp[i]);
 			}
 		}
 	}

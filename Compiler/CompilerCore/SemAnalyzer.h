@@ -4,6 +4,7 @@
 #include "ErrorModule.h"
 #include "ExpLog.h"
 #include "Token.h"
+#include "ExpLog.h"
 
 #include <vector>
 
@@ -20,7 +21,7 @@ namespace compilerCore
 	public:
 		semAnalyzer(errorModule^ errorModule);
 		~semAnalyzer();
-		void addExpLog(std::vector<token*> expLogVec);
+		void addExpLog(int lineNum, string funcName, std::vector<const token*> expLogVec, string symbolToUpdate = "");
 		void checkExpressions();
 	};
 }
