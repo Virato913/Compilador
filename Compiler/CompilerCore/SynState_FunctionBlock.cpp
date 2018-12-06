@@ -28,7 +28,7 @@ bool compilerCore::synState_FunctionBlock::checkSyntax(string funcName)
 	}
 	while (t->getLex().compare("}"))
 	{
-		t = m_lexAnalyzer->getNextToken();
+		//t = m_lexAnalyzer->getNextToken();
 		if (!t->getLex().compare("if"))
 		{
 			synState_If* s = new synState_If(m_lexAnalyzer, m_errorModule, m_symTable);

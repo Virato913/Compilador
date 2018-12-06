@@ -883,10 +883,10 @@ bool compilerCore::synState_ExpLog::checkSyntax(string funcName, string symbolTo
 	}
 	if (!t->getLex().compare("("))
 	{
-		synState_ExpLog* e = new synState_ExpLog(m_lexAnalyzer, m_errorModule, m_symTable);
+		m_expVec->push_back(t);
+		synState_ExpLog* e = new synState_ExpLog(m_lexAnalyzer, m_errorModule, m_symTable, m_expVec);
 		if (!e->checkSyntax(funcName, symbolToUpdate))
 			return false;
-		m_expVec->push_back(t);
 		t = m_lexAnalyzer->getNextToken();
 		if (t->getLex().compare(")"))
 		{
@@ -894,10 +894,11 @@ bool compilerCore::synState_ExpLog::checkSyntax(string funcName, string symbolTo
 			if (!m_errorModule->addErrorSyn(t->getLineNumber(), SYNTAX_ERROR_CPAREN))
 				return false;
 		}
+		m_expVec->push_back(t);
 	}
 	else if (t->getType() == TOKEN_TYPE::INT || t->getType() == TOKEN_TYPE::FLOAT || t->getType() == TOKEN_TYPE::STRING || !t->getLex().compare("false") || !t->getLex().compare("true"))
 	{
-
+		m_expVec->push_back(t);
 	}
 	else if (t->getType() == TOKEN_TYPE::ID)
 	{
@@ -905,7 +906,7 @@ bool compilerCore::synState_ExpLog::checkSyntax(string funcName, string symbolTo
 		{
 			m_expVec->push_back(t);
 			t = m_lexAnalyzer->getNextToken();
-			synState_ExpLog* e = new synState_ExpLog(m_lexAnalyzer, m_errorModule, m_symTable);
+			synState_ExpLog* e = new synState_ExpLog(m_lexAnalyzer, m_errorModule, m_symTable, m_expVec);
 			if (!e->checkSyntax(funcName, symbolToUpdate))
 				return false;
 			m_expVec->push_back(t);
@@ -925,16 +926,24 @@ bool compilerCore::synState_ExpLog::checkSyntax(string funcName, string symbolTo
 			if (!f->checkSyntax())
 				return false;
 		}
+		else
+		{
+			m_expVec->push_back(t);
+		}
 	}
 	if (m_lexAnalyzer->peekToken()->getType() == TOKEN_TYPE::ARIT_OP || m_lexAnalyzer->peekToken()->getType() == TOKEN_TYPE::LOGICAL_OP || m_lexAnalyzer->peekToken()->getType() == TOKEN_TYPE::REL_OP)
 	{
-		synState_ExpLog* e = new synState_ExpLog(m_lexAnalyzer, m_errorModule, m_symTable);
+		t = m_lexAnalyzer->getNextToken();
+		m_expVec->push_back(t);
+		synState_ExpLog* e = new synState_ExpLog(m_lexAnalyzer, m_errorModule, m_symTable, m_expVec);
 		if (!e->checkSyntax(funcName, symbolToUpdate))
 			return false;
 	}
 	if (!(m_errorModule->Errors->Length > errorCount))
 	{
-		
+		expLog* newExp = new expLog(t->getLineNumber(), funcName, *m_expVec, symbolToUpdate);
+		newExp->buildTree();
+		newExp->getLineNum();
 	}
 	return true;
 }

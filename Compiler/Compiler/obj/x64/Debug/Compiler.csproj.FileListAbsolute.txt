@@ -93,3 +93,4 @@ C:\Users\Lab 1 Alumno 11\Documents\Alberto Villa\Compilador\Compiler\Compiler\ob
 C:\Users\Lab 1 Alumno 11\Documents\Alberto Villa\Compilador\Compiler\Compiler\obj\x64\Debug\Compiler.csproj.CoreCompileInputs.cache
 C:\Users\Lab 1 Alumno 11\Documents\Alberto Villa\Compilador\Compiler\Compiler\obj\x64\Debug\Compiler.exe
 C:\Users\Lab 1 Alumno 11\Documents\Alberto Villa\Compilador\Compiler\Compiler\obj\x64\Debug\Compiler.pdb
+C:\Users\Lab 4 Alumno 2\Documents\Alberto Villa\New folder\Compilador\Compiler\Compiler\obj\x64\Debug\Compiler.csprojResolveAssemblyReference.cache

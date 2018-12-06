@@ -20,15 +20,18 @@ compilerCore::expLog::~expLog()
 
 void compilerCore::expLog::buildTree()
 {
-	//First, m_exp needs to be converted to postfix notation which will be stored in m_postFixExp
-	infixToPostfix();
-	//After that, the tree is actually built from the postfix expression
-	postfixToTree();
+	if (m_exp.size() > 0)
+	{
+		//First, m_exp needs to be converted to postfix notation which will be stored in m_postFixExp
+		infixToPostfix();
+		//After that, the tree is actually built from the postfix expression
+		postfixToTree();
+	}
 }
 
 bool compilerCore::expLog::validateTree()
 {
-
+	m_tree->evaluateNode();
 	return true;
 }
 

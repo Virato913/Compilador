@@ -1,55 +1,60 @@
 ﻿  Stdafx.cpp
   AssemblyInfo.cpp
   CompilerCore.cpp
-c:\users\alberto villa\documents\idv\sexto cuatrimestre\compiladores\compiler\compilercore\SynState_Statements.h(15): warning C4005: 'SYNTAX_ERROR_ID': macro redefinition
-  c:\users\alberto villa\documents\idv\sexto cuatrimestre\compiladores\compiler\compilercore\SynState_Var.h(10): note: see previous definition of 'SYNTAX_ERROR_ID'
-c:\users\alberto villa\documents\idv\sexto cuatrimestre\compiladores\compiler\compilercore\SynState_Param.h(10): warning C4005: 'SYNTAX_ERROR_ID': macro redefinition
-  c:\users\alberto villa\documents\idv\sexto cuatrimestre\compiladores\compiler\compilercore\SynState_Statements.h(15): note: see previous definition of 'SYNTAX_ERROR_ID'
-c:\users\alberto villa\documents\idv\sexto cuatrimestre\compiladores\compiler\compilercore\SynState_Function.h(13): warning C4005: 'SYNTAX_ERROR_PAREN': macro redefinition
-  c:\users\alberto villa\documents\idv\sexto cuatrimestre\compiladores\compiler\compilercore\SynState_Statements.h(7): note: see previous definition of 'SYNTAX_ERROR_PAREN'
+c:\users\lab 4 alumno 2\documents\alberto villa\new folder\compilador\compiler\compilercore\SynState_Statements.h(15): warning C4005: 'SYNTAX_ERROR_ID': macro redefinition
+  c:\users\lab 4 alumno 2\documents\alberto villa\new folder\compilador\compiler\compilercore\SynState_Var.h(10): note: see previous definition of 'SYNTAX_ERROR_ID'
+c:\users\lab 4 alumno 2\documents\alberto villa\new folder\compilador\compiler\compilercore\SynState_Param.h(10): warning C4005: 'SYNTAX_ERROR_ID': macro redefinition
+  c:\users\lab 4 alumno 2\documents\alberto villa\new folder\compilador\compiler\compilercore\SynState_Statements.h(15): note: see previous definition of 'SYNTAX_ERROR_ID'
+c:\users\lab 4 alumno 2\documents\alberto villa\new folder\compilador\compiler\compilercore\SynState_Function.h(13): warning C4005: 'SYNTAX_ERROR_PAREN': macro redefinition
+  c:\users\lab 4 alumno 2\documents\alberto villa\new folder\compilador\compiler\compilercore\SynState_Statements.h(7): note: see previous definition of 'SYNTAX_ERROR_PAREN'
 CompilerCore.cpp(102): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
 CompilerCore.cpp(119): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
   ErrorModule.cpp
   ExpLogTreeNode.cpp
 ExpLogTreeNode.cpp(144): warning C4312: 'type cast': conversion from 'int' to 'void *' of greater size
-ExpLogTreeNode.cpp(150): warning C4312: 'type cast': conversion from 'DWORD' to 'void *' of greater size
+ExpLogTreeNode.cpp(172): warning C4312: 'type cast': conversion from 'int' to 'void *' of greater size
+ExpLogTreeNode.cpp(174): warning C4312: 'type cast': conversion from 'int' to 'void *' of greater size
+ExpLogTreeNode.cpp(176): warning C4312: 'type cast': conversion from 'int' to 'void *' of greater size
+ExpLogTreeNode.cpp(178): warning C4312: 'type cast': conversion from 'int' to 'void *' of greater size
+ExpLogTreeNode.cpp(180): warning C4312: 'type cast': conversion from 'int' to 'void *' of greater size
+ExpLogTreeNode.cpp(182): warning C4312: 'type cast': conversion from 'int' to 'void *' of greater size
   GlobalNode.cpp
   LexAnalyzer.cpp
   LocalNode.cpp
   SemAnalyzer.cpp
   SymTable.cpp
   SynAnalyzer.cpp
-c:\users\alberto villa\documents\idv\sexto cuatrimestre\compiladores\compiler\compilercore\SynState_Statements.h(15): warning C4005: 'SYNTAX_ERROR_ID': macro redefinition
-  c:\users\alberto villa\documents\idv\sexto cuatrimestre\compiladores\compiler\compilercore\SynState_Var.h(10): note: see previous definition of 'SYNTAX_ERROR_ID'
-c:\users\alberto villa\documents\idv\sexto cuatrimestre\compiladores\compiler\compilercore\SynState_Param.h(10): warning C4005: 'SYNTAX_ERROR_ID': macro redefinition
-  c:\users\alberto villa\documents\idv\sexto cuatrimestre\compiladores\compiler\compilercore\SynState_Statements.h(15): note: see previous definition of 'SYNTAX_ERROR_ID'
-c:\users\alberto villa\documents\idv\sexto cuatrimestre\compiladores\compiler\compilercore\SynState_Function.h(13): warning C4005: 'SYNTAX_ERROR_PAREN': macro redefinition
-  c:\users\alberto villa\documents\idv\sexto cuatrimestre\compiladores\compiler\compilercore\SynState_Statements.h(7): note: see previous definition of 'SYNTAX_ERROR_PAREN'
+c:\users\lab 4 alumno 2\documents\alberto villa\new folder\compilador\compiler\compilercore\SynState_Statements.h(15): warning C4005: 'SYNTAX_ERROR_ID': macro redefinition
+  c:\users\lab 4 alumno 2\documents\alberto villa\new folder\compilador\compiler\compilercore\SynState_Var.h(10): note: see previous definition of 'SYNTAX_ERROR_ID'
+c:\users\lab 4 alumno 2\documents\alberto villa\new folder\compilador\compiler\compilercore\SynState_Param.h(10): warning C4005: 'SYNTAX_ERROR_ID': macro redefinition
+  c:\users\lab 4 alumno 2\documents\alberto villa\new folder\compilador\compiler\compilercore\SynState_Statements.h(15): note: see previous definition of 'SYNTAX_ERROR_ID'
+c:\users\lab 4 alumno 2\documents\alberto villa\new folder\compilador\compiler\compilercore\SynState_Function.h(13): warning C4005: 'SYNTAX_ERROR_PAREN': macro redefinition
+  c:\users\lab 4 alumno 2\documents\alberto villa\new folder\compilador\compiler\compilercore\SynState_Statements.h(7): note: see previous definition of 'SYNTAX_ERROR_PAREN'
   SynState.cpp
   ExpLog.cpp
   SynState_FunctionBlock.cpp
-c:\users\alberto villa\documents\idv\sexto cuatrimestre\compiladores\compiler\compilercore\SynState_Var.h(10): warning C4005: 'SYNTAX_ERROR_ID': macro redefinition
-  c:\users\alberto villa\documents\idv\sexto cuatrimestre\compiladores\compiler\compilercore\SynState_Statements.h(15): note: see previous definition of 'SYNTAX_ERROR_ID'
+c:\users\lab 4 alumno 2\documents\alberto villa\new folder\compilador\compiler\compilercore\SynState_Var.h(10): warning C4005: 'SYNTAX_ERROR_ID': macro redefinition
+  c:\users\lab 4 alumno 2\documents\alberto villa\new folder\compilador\compiler\compilercore\SynState_Statements.h(15): note: see previous definition of 'SYNTAX_ERROR_ID'
   SynState_Param.cpp
   SynState_Function.cpp
-c:\users\alberto villa\documents\idv\sexto cuatrimestre\compiladores\compiler\compilercore\SynState_Var.h(10): warning C4005: 'SYNTAX_ERROR_ID': macro redefinition
-  c:\users\alberto villa\documents\idv\sexto cuatrimestre\compiladores\compiler\compilercore\SynState_Statements.h(15): note: see previous definition of 'SYNTAX_ERROR_ID'
-c:\users\alberto villa\documents\idv\sexto cuatrimestre\compiladores\compiler\compilercore\SynState_Function.h(13): warning C4005: 'SYNTAX_ERROR_PAREN': macro redefinition
-  c:\users\alberto villa\documents\idv\sexto cuatrimestre\compiladores\compiler\compilercore\SynState_Statements.h(7): note: see previous definition of 'SYNTAX_ERROR_PAREN'
+c:\users\lab 4 alumno 2\documents\alberto villa\new folder\compilador\compiler\compilercore\SynState_Var.h(10): warning C4005: 'SYNTAX_ERROR_ID': macro redefinition
+  c:\users\lab 4 alumno 2\documents\alberto villa\new folder\compilador\compiler\compilercore\SynState_Statements.h(15): note: see previous definition of 'SYNTAX_ERROR_ID'
+c:\users\lab 4 alumno 2\documents\alberto villa\new folder\compilador\compiler\compilercore\SynState_Function.h(13): warning C4005: 'SYNTAX_ERROR_PAREN': macro redefinition
+  c:\users\lab 4 alumno 2\documents\alberto villa\new folder\compilador\compiler\compilercore\SynState_Statements.h(7): note: see previous definition of 'SYNTAX_ERROR_PAREN'
   SynState_Program.cpp
-c:\users\alberto villa\documents\idv\sexto cuatrimestre\compiladores\compiler\compilercore\SynState_Statements.h(15): warning C4005: 'SYNTAX_ERROR_ID': macro redefinition
-  c:\users\alberto villa\documents\idv\sexto cuatrimestre\compiladores\compiler\compilercore\SynState_Var.h(10): note: see previous definition of 'SYNTAX_ERROR_ID'
-c:\users\alberto villa\documents\idv\sexto cuatrimestre\compiladores\compiler\compilercore\SynState_Param.h(10): warning C4005: 'SYNTAX_ERROR_ID': macro redefinition
-  c:\users\alberto villa\documents\idv\sexto cuatrimestre\compiladores\compiler\compilercore\SynState_Statements.h(15): note: see previous definition of 'SYNTAX_ERROR_ID'
-c:\users\alberto villa\documents\idv\sexto cuatrimestre\compiladores\compiler\compilercore\SynState_Function.h(13): warning C4005: 'SYNTAX_ERROR_PAREN': macro redefinition
-  c:\users\alberto villa\documents\idv\sexto cuatrimestre\compiladores\compiler\compilercore\SynState_Statements.h(7): note: see previous definition of 'SYNTAX_ERROR_PAREN'
+c:\users\lab 4 alumno 2\documents\alberto villa\new folder\compilador\compiler\compilercore\SynState_Statements.h(15): warning C4005: 'SYNTAX_ERROR_ID': macro redefinition
+  c:\users\lab 4 alumno 2\documents\alberto villa\new folder\compilador\compiler\compilercore\SynState_Var.h(10): note: see previous definition of 'SYNTAX_ERROR_ID'
+c:\users\lab 4 alumno 2\documents\alberto villa\new folder\compilador\compiler\compilercore\SynState_Param.h(10): warning C4005: 'SYNTAX_ERROR_ID': macro redefinition
+  c:\users\lab 4 alumno 2\documents\alberto villa\new folder\compilador\compiler\compilercore\SynState_Statements.h(15): note: see previous definition of 'SYNTAX_ERROR_ID'
+c:\users\lab 4 alumno 2\documents\alberto villa\new folder\compilador\compiler\compilercore\SynState_Function.h(13): warning C4005: 'SYNTAX_ERROR_PAREN': macro redefinition
+  c:\users\lab 4 alumno 2\documents\alberto villa\new folder\compilador\compiler\compilercore\SynState_Statements.h(7): note: see previous definition of 'SYNTAX_ERROR_PAREN'
   SynState_StatementBlock.cpp
   SynState_Statements.cpp
   SynState_Var.cpp
   Token.cpp
   Generating Code...
-c:\users\alberto villa\documents\idv\sexto cuatrimestre\compiladores\compiler\compilercore\explogtreenode.cpp(158): warning C4715: 'compilerCore::expLogTreeNode::evaluateNode': not all control paths return a value
+c:\users\lab 4 alumno 2\documents\alberto villa\new folder\compilador\compiler\compilercore\explogtreenode.cpp(210): warning C4715: 'compilerCore::expLogTreeNode::evaluateNode': not all control paths return a value
   .NETFramework,Version=v4.5.2.AssemblyAttributes.cpp
   AssemblyInfo.obj : /DEBUG:FASTLINK is not supported when managed code is present; restarting link with /DEBUG:FULL
-  CompilerCore.vcxproj -> C:\Users\Alberto Villa\Documents\IDV\Sexto Cuatrimestre\Compiladores\Compiler\DLL\Binaries\x64\Debug\compilerCore.dll
-  CompilerCore.vcxproj -> C:\Users\Alberto Villa\Documents\IDV\Sexto Cuatrimestre\Compiladores\Compiler\DLL\Binaries\x64\Debug\compilerCore.pdb (Partial PDB)
+  CompilerCore.vcxproj -> C:\Users\Lab 4 Alumno 2\Documents\Alberto Villa\New folder\Compilador\Compiler\DLL\Binaries\x64\Debug\compilerCore.dll
+  CompilerCore.vcxproj -> C:\Users\Lab 4 Alumno 2\Documents\Alberto Villa\New folder\Compilador\Compiler\DLL\Binaries\x64\Debug\compilerCore.pdb (Partial PDB)
